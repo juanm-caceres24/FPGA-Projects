@@ -1,0 +1,5 @@
+{
+  "name": "FPGA-BlinkTest",
+  "board": "tangnano20k",
+  "includedFiles": "all"
+}
