@@ -39,20 +39,28 @@
       },
       "attributes": {
         "top": "00000000000000000000000000000001",
-        "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:1.1-12.10"
+        "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:1.1-28.10"
       },
       "ports": {
         "leds": {
           "direction": "output",
-          "bits": [ 9644, 9641, 9638, 9635, 9632, 9629 ]
+          "bits": [ 9696, 9693, 9690, 9687, 9684, 9681 ]
         },
         "clk": {
+          "direction": "input",
+          "bits": [ 9496 ]
+        },
+        "btn2": {
+          "direction": "input",
+          "bits": [ 9495 ]
+        },
+        "btn1": {
           "direction": "input",
           "bits": [ 9494 ]
         }
       },
       "cells": {
-        "counter_DFF_Q_10_passthrough_lut$": {
+        "counter_DFF_Q_23_passthrough_lut$": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
@@ -60,53 +68,15 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000101",
-            "NEXTPNR_BEL": "X3Y44/LUT4"
+            "NEXTPNR_BEL": "X3Y48/LUT1"
           },
           "port_directions": {
             "F": "output",
             "I3": "input"
           },
           "connections": {
-            "F": [ 9716 ],
-            "I3": [ 9508 ]
-          }
-        },
-        "counter_DFF_Q_3_passthrough_lut$": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "00000000000000001111111100000000"
-          },
-          "attributes": {
-            "BEL_STRENGTH": "00000000000000000000000000000101",
-            "NEXTPNR_BEL": "X4Y44/LUT1"
-          },
-          "port_directions": {
-            "F": "output",
-            "I3": "input"
-          },
-          "connections": {
-            "F": [ 9714 ],
-            "I3": [ 9590 ]
-          }
-        },
-        "counter_DFF_Q_6_passthrough_lut$": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "00000000000000001111111100000000"
-          },
-          "attributes": {
-            "BEL_STRENGTH": "00000000000000000000000000000101",
-            "NEXTPNR_BEL": "X4Y44/LUT0"
-          },
-          "port_directions": {
-            "F": "output",
-            "I3": "input"
-          },
-          "connections": {
-            "F": [ 9712 ],
-            "I3": [ 9605 ]
+            "F": [ 9804 ],
+            "I3": [ 9608 ]
           }
         },
         "clk_IBUF_I_O_BUFG": {
@@ -124,10 +94,10 @@
           },
           "connections": {
             "O": [  ],
-            "I": [ 9699 ]
+            "I": [ 9791 ]
           }
         },
-        "counter_DFF_Q_passthrough_lut$": {
+        "counter_DFF_Q_11_passthrough_lut$": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
@@ -135,33 +105,113 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000101",
-            "NEXTPNR_BEL": "X5Y43/LUT5"
+            "NEXTPNR_BEL": "X6Y47/LUT2"
           },
           "port_directions": {
             "F": "output",
             "I3": "input"
           },
           "connections": {
-            "F": [ 9718 ],
-            "I3": [ 9501 ]
+            "F": [ 9816 ],
+            "I3": [ 9530 ]
           }
         },
-        "counter_DFF_Q_D_ALU_SUM_DUMMY_ALULC": {
+        "counter_DFF_Q_12_passthrough_lut$": {
           "hide_name": 0,
-          "type": "ALU",
+          "type": "LUT4",
           "parameters": {
-            "ALU_MODE": "C2L"
+            "INIT": "00000000000000001111111100000000"
           },
           "attributes": {
-            "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X5Y43/ALU1"
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X6Y47/LUT4"
           },
           "port_directions": {
+            "F": "output",
+            "I3": "input"
           },
           "connections": {
+            "F": [ 9814 ],
+            "I3": [ 9539 ]
           }
         },
-        "counter_DFF_Q_22_D_ALU_SUM_CIN_ALU_COUT_HEAD_ALULC": {
+        "counter_DFF_Q_15_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X5Y46/LUT0"
+          },
+          "port_directions": {
+            "F": "output",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 9812 ],
+            "I3": [ 9557 ]
+          }
+        },
+        "counter_DFF_Q_16_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X5Y46/LUT2"
+          },
+          "port_directions": {
+            "F": "output",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 9810 ],
+            "I3": [ 9563 ]
+          }
+        },
+        "counter_DFF_Q_17_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X4Y46/LUT1"
+          },
+          "port_directions": {
+            "F": "output",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 9808 ],
+            "I3": [ 9569 ]
+          }
+        },
+        "counter_DFF_Q_2_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X2Y48/LUT3"
+          },
+          "port_directions": {
+            "F": "output",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 9806 ],
+            "I3": [ 9590 ]
+          }
+        },
+        "counter_DFF_Q_4_D_ALU_SUM_CIN_ALU_COUT_HEAD_ALULC": {
           "hide_name": 0,
           "type": "ALU",
           "parameters": {
@@ -169,15 +219,15 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X1Y43/ALU0"
+            "NEXTPNR_BEL": "X1Y47/ALU0"
           },
           "port_directions": {
             "I2": "input",
             "COUT": "output"
           },
           "connections": {
-            "I2": [ 9665 ],
-            "COUT": [ 9670 ]
+            "I2": [ 9754 ],
+            "COUT": [ 9759 ]
           }
         },
         "GSR": {
@@ -193,133 +243,637 @@
             "GSRI": "input"
           },
           "connections": {
-            "GSRI": [ 9665 ]
+            "GSRI": [ 9754 ]
           }
         },
-        "leds_OBUF_O_I_LUT1_F_5": {
+        "leds_OBUF_O_I_LUT4_F_I3_MUX2_LUT5_O_I1_LUT4_F": {
           "hide_name": 0,
-          "type": "LUT1",
+          "type": "LUT4",
           "parameters": {
-            "INIT": "01"
+            "INIT": "0001001101010111"
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X3Y49/LUT4",
-            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:135.23-136.15",
+            "NEXTPNR_BEL": "X3Y46/LUT1",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:153.41-153.66|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
             "I0": "input",
             "F": "output"
           },
           "connections": {
-            "I0": [ 9502 ],
-            "F": [ 9628 ]
+            "I3": [ 9559 ],
+            "I2": [ 9553 ],
+            "I1": [ 9501 ],
+            "I0": [ 9510 ],
+            "F": [ 9736 ]
           }
         },
-        "leds_OBUF_O_I_LUT1_F_4": {
+        "leds_OBUF_O_I_LUT4_F_I3_MUX2_LUT5_O_I0_LUT4_F": {
           "hide_name": 0,
-          "type": "LUT1",
+          "type": "LUT4",
           "parameters": {
-            "INIT": "01"
+            "INIT": "1001101111011111"
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X1Y48/LUT7",
-            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:135.23-136.15",
+            "NEXTPNR_BEL": "X3Y46/LUT0",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:152.41-152.66|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
             "I0": "input",
             "F": "output"
           },
           "connections": {
-            "I0": [ 9506 ],
-            "F": [ 9631 ]
+            "I3": [ 9559 ],
+            "I2": [ 9553 ],
+            "I1": [ 9501 ],
+            "I0": [ 9510 ],
+            "F": [ 9735 ]
           }
         },
-        "leds_OBUF_O_I_LUT1_F_3": {
+        "leds_OBUF_O_I_LUT4_F_I3_MUX2_LUT5_O": {
           "hide_name": 0,
-          "type": "LUT1",
+          "type": "MUX2_LUT5",
           "parameters": {
-            "INIT": "01"
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X4Y43/LUT7",
-            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:135.23-136.15",
+            "NEXTPNR_BEL": "X3Y46/MUX0",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:154.14-154.54",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
+            "S0": "input",
+            "O": "output",
+            "I1": "input",
+            "I0": "input"
+          },
+          "connections": {
+            "S0": [ 9565 ],
+            "O": [ 9698 ],
+            "I1": [ 9736 ],
+            "I0": [ 9735 ]
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_5_I3_MUX2_LUT5_O_I1_LUT4_F": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0001001101010111"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X6Y47/LUT7",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:153.41-153.66|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
             "I0": "input",
             "F": "output"
           },
           "connections": {
-            "I0": [ 9601 ],
-            "F": [ 9643 ]
+            "I3": [ 9547 ],
+            "I2": [ 9541 ],
+            "I1": [ 9501 ],
+            "I0": [ 9510 ],
+            "F": [ 9731 ]
           }
         },
-        "leds_OBUF_O_I_LUT1_F_2": {
+        "leds_OBUF_O_I_LUT4_F_5_I3_MUX2_LUT5_O_I0_LUT4_F": {
           "hide_name": 0,
-          "type": "LUT1",
+          "type": "LUT4",
           "parameters": {
-            "INIT": "01"
+            "INIT": "1001101111011111"
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X3Y44/LUT3",
-            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:135.23-136.15",
+            "NEXTPNR_BEL": "X6Y47/LUT6",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:152.41-152.66|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
             "I0": "input",
             "F": "output"
           },
           "connections": {
-            "I0": [ 9596 ],
-            "F": [ 9640 ]
+            "I3": [ 9547 ],
+            "I2": [ 9541 ],
+            "I1": [ 9501 ],
+            "I0": [ 9510 ],
+            "F": [ 9730 ]
           }
         },
-        "leds_OBUF_O_I_LUT1_F_1": {
+        "leds_OBUF_O_I_LUT4_F_5_I3_MUX2_LUT5_O": {
           "hide_name": 0,
-          "type": "LUT1",
+          "type": "MUX2_LUT5",
           "parameters": {
-            "INIT": "01"
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X4Y44/LUT3",
-            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:135.23-136.15",
+            "NEXTPNR_BEL": "X6Y47/MUX6",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:154.14-154.54",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
+            "S0": "input",
+            "O": "output",
+            "I1": "input",
+            "I0": "input"
+          },
+          "connections": {
+            "S0": [ 9553 ],
+            "O": [ 9728 ],
+            "I1": [ 9731 ],
+            "I0": [ 9730 ]
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_5": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1110111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X6Y47/LUT1",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
             "I0": "input",
             "F": "output"
           },
           "connections": {
-            "I0": [ 9591 ],
-            "F": [ 9637 ]
+            "I3": [ 9728 ],
+            "I2": [ 9532 ],
+            "I1": [ 9501 ],
+            "I0": [ 9510 ],
+            "F": [ 9680 ]
           }
         },
-        "leds_OBUF_O_I_LUT1_F": {
+        "leds_OBUF_O_I_LUT4_F_4_I3_MUX2_LUT5_O_I1_LUT4_F": {
           "hide_name": 0,
-          "type": "LUT1",
+          "type": "LUT4",
           "parameters": {
-            "INIT": "01"
+            "INIT": "0001001101010111"
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X3Y46/LUT3",
-            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:135.23-136.15",
+            "NEXTPNR_BEL": "X2Y46/LUT1",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:153.41-153.66|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
             "I0": "input",
             "F": "output"
           },
           "connections": {
-            "I0": [ 9565 ],
-            "F": [ 9634 ]
+            "I3": [ 9565 ],
+            "I2": [ 9559 ],
+            "I1": [ 9501 ],
+            "I0": [ 9510 ],
+            "F": [ 9724 ]
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_4_I3_MUX2_LUT5_O_I0_LUT4_F": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1001101111011111"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y46/LUT0",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:152.41-152.66|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I3": [ 9565 ],
+            "I2": [ 9559 ],
+            "I1": [ 9501 ],
+            "I0": [ 9510 ],
+            "F": [ 9723 ]
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_4_I3_MUX2_LUT5_O": {
+          "hide_name": 0,
+          "type": "MUX2_LUT5",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y46/MUX0",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:154.14-154.54",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "S0": "input",
+            "O": "output",
+            "I1": "input",
+            "I0": "input"
+          },
+          "connections": {
+            "S0": [ 9571 ],
+            "O": [ 9721 ],
+            "I1": [ 9724 ],
+            "I0": [ 9723 ]
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_4": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1110111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y46/LUT6",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I3": [ 9721 ],
+            "I2": [ 9553 ],
+            "I1": [ 9501 ],
+            "I0": [ 9510 ],
+            "F": [ 9689 ]
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_3_I3_MUX2_LUT5_O_I1_LUT4_F": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0001001101010111"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y46/LUT3",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:153.41-153.66|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I3": [ 9571 ],
+            "I2": [ 9565 ],
+            "I1": [ 9501 ],
+            "I0": [ 9510 ],
+            "F": [ 9717 ]
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_3_I3_MUX2_LUT5_O_I0_LUT4_F": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1001101111011111"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y46/LUT2",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:152.41-152.66|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I3": [ 9571 ],
+            "I2": [ 9565 ],
+            "I1": [ 9501 ],
+            "I0": [ 9510 ],
+            "F": [ 9716 ]
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_3_I3_MUX2_LUT5_O": {
+          "hide_name": 0,
+          "type": "MUX2_LUT5",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y46/MUX2",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:154.14-154.54",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "S0": "input",
+            "O": "output",
+            "I1": "input",
+            "I0": "input"
+          },
+          "connections": {
+            "S0": [ 9577 ],
+            "O": [ 9714 ],
+            "I1": [ 9717 ],
+            "I0": [ 9716 ]
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_3": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1110111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y46/LUT5",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I3": [ 9714 ],
+            "I2": [ 9559 ],
+            "I1": [ 9501 ],
+            "I0": [ 9510 ],
+            "F": [ 9692 ]
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_2_I3_MUX2_LUT5_O_I1_LUT4_F": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0001001101010111"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y46/LUT5",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:153.41-153.66|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I3": [ 9577 ],
+            "I2": [ 9571 ],
+            "I1": [ 9501 ],
+            "I0": [ 9510 ],
+            "F": [ 9710 ]
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_2_I3_MUX2_LUT5_O_I0_LUT4_F": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1001101111011111"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y46/LUT4",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:152.41-152.66|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I3": [ 9577 ],
+            "I2": [ 9571 ],
+            "I1": [ 9501 ],
+            "I0": [ 9510 ],
+            "F": [ 9709 ]
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_2_I3_MUX2_LUT5_O": {
+          "hide_name": 0,
+          "type": "MUX2_LUT5",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y46/MUX4",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:154.14-154.54",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "S0": "input",
+            "O": "output",
+            "I1": "input",
+            "I0": "input"
+          },
+          "connections": {
+            "S0": [ 9583 ],
+            "O": [ 9707 ],
+            "I1": [ 9710 ],
+            "I0": [ 9709 ]
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_2": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1110111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y46/LUT0",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I3": [ 9707 ],
+            "I2": [ 9565 ],
+            "I1": [ 9501 ],
+            "I0": [ 9510 ],
+            "F": [ 9695 ]
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_1_I3_MUX2_LUT5_O_I1_LUT4_F": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0001001101010111"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X5Y46/LUT7",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:153.41-153.66|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I3": [ 9553 ],
+            "I2": [ 9547 ],
+            "I1": [ 9501 ],
+            "I0": [ 9510 ],
+            "F": [ 9703 ]
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_1_I3_MUX2_LUT5_O_I0_LUT4_F": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1001101111011111"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X5Y46/LUT6",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:152.41-152.66|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I3": [ 9553 ],
+            "I2": [ 9547 ],
+            "I1": [ 9501 ],
+            "I0": [ 9510 ],
+            "F": [ 9702 ]
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_1_I3_MUX2_LUT5_O": {
+          "hide_name": 0,
+          "type": "MUX2_LUT5",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X5Y46/MUX6",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:154.14-154.54",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "S0": "input",
+            "O": "output",
+            "I1": "input",
+            "I0": "input"
+          },
+          "connections": {
+            "S0": [ 9559 ],
+            "O": [ 9700 ],
+            "I1": [ 9703 ],
+            "I0": [ 9702 ]
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_1": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1110111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X5Y47/LUT6",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I3": [ 9700 ],
+            "I2": [ 9541 ],
+            "I1": [ 9501 ],
+            "I0": [ 9510 ],
+            "F": [ 9683 ]
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1110111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y46/LUT6",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I3": [ 9698 ],
+            "I2": [ 9547 ],
+            "I1": [ 9501 ],
+            "I0": [ 9510 ],
+            "F": [ 9686 ]
           }
         },
         "leds_OBUF_O_5": {
@@ -332,7 +886,7 @@
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000101",
             "NEXTPNR_BEL": "X0Y46/IOBA",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:3.23-3.27",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.23-5.27",
             "&IO_TYPE=LVCMOS33": "00000000000000000000000000000001",
             "&PULL_MODE=UP": "00000000000000000000000000000001",
             "&DRIVE=8": "00000000000000000000000000000001",
@@ -343,8 +897,8 @@
             "I": "input"
           },
           "connections": {
-            "O": [ 9644 ],
-            "I": [ 9643 ]
+            "O": [ 9696 ],
+            "I": [ 9695 ]
           }
         },
         "leds_OBUF_O_4": {
@@ -357,7 +911,7 @@
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000101",
             "NEXTPNR_BEL": "X0Y46/IOBB",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:3.23-3.27",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.23-5.27",
             "&IO_TYPE=LVCMOS33": "00000000000000000000000000000001",
             "&PULL_MODE=UP": "00000000000000000000000000000001",
             "&DRIVE=8": "00000000000000000000000000000001",
@@ -368,8 +922,8 @@
             "I": "input"
           },
           "connections": {
-            "O": [ 9641 ],
-            "I": [ 9640 ]
+            "O": [ 9693 ],
+            "I": [ 9692 ]
           }
         },
         "leds_OBUF_O_3": {
@@ -382,7 +936,7 @@
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000101",
             "NEXTPNR_BEL": "X0Y48/IOBA",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:3.23-3.27",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.23-5.27",
             "&IO_TYPE=LVCMOS33": "00000000000000000000000000000001",
             "&PULL_MODE=UP": "00000000000000000000000000000001",
             "&DRIVE=8": "00000000000000000000000000000001",
@@ -393,8 +947,8 @@
             "I": "input"
           },
           "connections": {
-            "O": [ 9638 ],
-            "I": [ 9637 ]
+            "O": [ 9690 ],
+            "I": [ 9689 ]
           }
         },
         "leds_OBUF_O_2": {
@@ -407,7 +961,7 @@
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000101",
             "NEXTPNR_BEL": "X0Y48/IOBB",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:3.23-3.27",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.23-5.27",
             "&IO_TYPE=LVCMOS33": "00000000000000000000000000000001",
             "&PULL_MODE=UP": "00000000000000000000000000000001",
             "&DRIVE=8": "00000000000000000000000000000001",
@@ -418,8 +972,8 @@
             "I": "input"
           },
           "connections": {
-            "O": [ 9635 ],
-            "I": [ 9634 ]
+            "O": [ 9687 ],
+            "I": [ 9686 ]
           }
         },
         "leds_OBUF_O_1": {
@@ -432,7 +986,7 @@
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000101",
             "NEXTPNR_BEL": "X0Y50/IOBA",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:3.23-3.27",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.23-5.27",
             "&IO_TYPE=LVCMOS33": "00000000000000000000000000000001",
             "&PULL_MODE=UP": "00000000000000000000000000000001",
             "&DRIVE=8": "00000000000000000000000000000001",
@@ -443,8 +997,8 @@
             "I": "input"
           },
           "connections": {
-            "O": [ 9632 ],
-            "I": [ 9631 ]
+            "O": [ 9684 ],
+            "I": [ 9683 ]
           }
         },
         "leds_OBUF_O": {
@@ -457,7 +1011,7 @@
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000101",
             "NEXTPNR_BEL": "X0Y50/IOBB",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:3.23-3.27",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.23-5.27",
             "&IO_TYPE=LVCMOS33": "00000000000000000000000000000001",
             "&PULL_MODE=UP": "00000000000000000000000000000001",
             "&DRIVE=8": "00000000000000000000000000000001",
@@ -468,8 +1022,396 @@
             "I": "input"
           },
           "connections": {
-            "O": [ 9629 ],
-            "I": [ 9628 ]
+            "O": [ 9681 ],
+            "I": [ 9680 ]
+          }
+        },
+        "counter_DFF_Q_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "RAW_ALU_LUT": "00000000000000001100000011000000",
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y47/ALU3",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9754 ],
+            "SUM": [ 9519 ],
+            "I3": [  ],
+            "I1": [ 9520 ],
+            "I0": [  ],
+            "COUT": [ 9659 ],
+            "CIN": [ 9652 ]
+          }
+        },
+        "counter_DFF_Q_9_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "RAW_ALU_LUT": "00000000000000001100000011000000",
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y47/ALU2",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9754 ],
+            "SUM": [ 9675 ],
+            "I3": [  ],
+            "I1": [ 9676 ],
+            "I0": [  ],
+            "COUT": [ 9587 ],
+            "CIN": [ 9639 ]
+          }
+        },
+        "counter_DFF_Q_9": {
+          "hide_name": 0,
+          "type": "DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y47/DFF2",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:10.5-12.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "Q": [ 9676 ],
+            "D": [ 9675 ],
+            "CLK": [ 9517 ]
+          }
+        },
+        "counter_DFF_Q_8_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "RAW_ALU_LUT": "00000000000000001100000011000000",
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y47/ALU4",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9754 ],
+            "SUM": [ 9671 ],
+            "I3": [  ],
+            "I1": [ 9672 ],
+            "I0": [  ],
+            "COUT": [ 9665 ],
+            "CIN": [ 9588 ]
+          }
+        },
+        "counter_DFF_Q_8": {
+          "hide_name": 0,
+          "type": "DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y47/DFF4",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:10.5-12.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "Q": [ 9672 ],
+            "D": [ 9671 ],
+            "CLK": [ 9517 ]
+          }
+        },
+        "counter_DFF_Q_7_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "RAW_ALU_LUT": "00000000000000001100000011000000",
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y47/ALU5",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9754 ],
+            "SUM": [ 9667 ],
+            "I3": [  ],
+            "I1": [ 9668 ],
+            "I0": [  ],
+            "COUT": [ 9644 ],
+            "CIN": [ 9660 ]
+          }
+        },
+        "counter_DFF_Q_7": {
+          "hide_name": 0,
+          "type": "DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y47/DFF5",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:10.5-12.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "Q": [ 9668 ],
+            "D": [ 9667 ],
+            "CLK": [ 9517 ]
+          }
+        },
+        "counter_DFF_Q_6_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "RAW_ALU_LUT": "00000000000000001100000011000000",
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y47/ALU5",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9754 ],
+            "SUM": [ 9662 ],
+            "I3": [  ],
+            "I1": [ 9663 ],
+            "I0": [  ],
+            "COUT": [ 9636 ],
+            "CIN": [ 9665 ]
+          }
+        },
+        "counter_DFF_Q_6": {
+          "hide_name": 0,
+          "type": "DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y47/DFF5",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:10.5-12.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "Q": [ 9663 ],
+            "D": [ 9662 ],
+            "CLK": [ 9517 ]
+          }
+        },
+        "counter_DFF_Q_5_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "RAW_ALU_LUT": "00000000000000001100000011000000",
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y47/ALU4",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9754 ],
+            "SUM": [ 9656 ],
+            "I3": [  ],
+            "I1": [ 9657 ],
+            "I0": [  ],
+            "COUT": [ 9660 ],
+            "CIN": [ 9659 ]
+          }
+        },
+        "counter_DFF_Q_5": {
+          "hide_name": 0,
+          "type": "DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y47/DFF4",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:10.5-12.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "Q": [ 9657 ],
+            "D": [ 9656 ],
+            "CLK": [ 9517 ]
+          }
+        },
+        "counter_DFF_Q_4_D_ALU_SUM_CIN_ALU_COUT": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "RAW_ALU_LUT": "00000000000000000011000000111111",
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y47/ALU1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9754 ],
+            "SUM": [ 9654 ],
+            "I3": [  ],
+            "I1": [ 9527 ],
+            "I0": [  ],
+            "COUT": [ 9651 ],
+            "CIN": [ 9759 ]
+          }
+        },
+        "counter_DFF_Q_4_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "RAW_ALU_LUT": "00000000000000001100000011000000",
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y47/ALU2",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9754 ],
+            "SUM": [ 9648 ],
+            "I3": [  ],
+            "I1": [ 9649 ],
+            "I0": [  ],
+            "COUT": [ 9652 ],
+            "CIN": [ 9651 ]
+          }
+        },
+        "counter_DFF_Q_4": {
+          "hide_name": 0,
+          "type": "DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y47/DFF2",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:10.5-12.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "Q": [ 9649 ],
+            "D": [ 9648 ],
+            "CLK": [ 9517 ]
           }
         },
         "$PACKER_GND_DRV": {
@@ -485,7 +1427,7 @@
             "G": "output"
           },
           "connections": {
-            "G": [ 9666 ]
+            "G": [ 9755 ]
           }
         },
         "$PACKER_VCC_DRV": {
@@ -501,363 +1443,7 @@
             "V": "output"
           },
           "connections": {
-            "V": [ 9665 ]
-          }
-        },
-        "counter_DFF_Q_D_ALU_SUM": {
-          "hide_name": 0,
-          "type": "ALU",
-          "parameters": {
-            "RAW_ALU_LUT": "00000000000000001100000011000000",
-            "ALU_MODE": "00000000000000000000000000000010"
-          },
-          "attributes": {
-            "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X5Y43/ALU0",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
-            "module_not_derived": "00000000000000000000000000000001"
-          },
-          "port_directions": {
-            "I2": "input",
-            "SUM": "output",
-            "I3": "input",
-            "I1": "input",
-            "I0": "input",
-            "COUT": "output",
-            "CIN": "input"
-          },
-          "connections": {
-            "I2": [ 9665 ],
-            "SUM": [ 9501 ],
-            "I3": [  ],
-            "I1": [ 9502 ],
-            "I0": [  ],
-            "COUT": [ 9624 ],
-            "CIN": [ 9562 ]
-          }
-        },
-        "counter_DFF_Q_9_D_ALU_SUM": {
-          "hide_name": 0,
-          "type": "ALU",
-          "parameters": {
-            "RAW_ALU_LUT": "00000000000000001100000011000000",
-            "ALU_MODE": "00000000000000000000000000000010"
-          },
-          "attributes": {
-            "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X3Y43/ALU3",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
-            "module_not_derived": "00000000000000000000000000000001"
-          },
-          "port_directions": {
-            "I2": "input",
-            "SUM": "output",
-            "I3": "input",
-            "I1": "input",
-            "I0": "input",
-            "COUT": "output",
-            "CIN": "input"
-          },
-          "connections": {
-            "I2": [ 9665 ],
-            "SUM": [ 9620 ],
-            "I3": [  ],
-            "I1": [ 9621 ],
-            "I0": [  ],
-            "COUT": [ 9618 ],
-            "CIN": [ 9512 ]
-          }
-        },
-        "counter_DFF_Q_9": {
-          "hide_name": 0,
-          "type": "DFF",
-          "parameters": {
-          },
-          "attributes": {
-            "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X3Y43/DFF3",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:7.5-9.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
-            "module_not_derived": "00000000000000000000000000000001"
-          },
-          "port_directions": {
-            "Q": "output",
-            "D": "input",
-            "CLK": "input"
-          },
-          "connections": {
-            "Q": [ 9621 ],
-            "D": [ 9620 ],
-            "CLK": [ 9498 ]
-          }
-        },
-        "counter_DFF_Q_8_D_ALU_SUM": {
-          "hide_name": 0,
-          "type": "ALU",
-          "parameters": {
-            "RAW_ALU_LUT": "00000000000000001100000011000000",
-            "ALU_MODE": "00000000000000000000000000000010"
-          },
-          "attributes": {
-            "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X3Y43/ALU4",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
-            "module_not_derived": "00000000000000000000000000000001"
-          },
-          "port_directions": {
-            "I2": "input",
-            "SUM": "output",
-            "I3": "input",
-            "I1": "input",
-            "I0": "input",
-            "COUT": "output",
-            "CIN": "input"
-          },
-          "connections": {
-            "I2": [ 9665 ],
-            "SUM": [ 9615 ],
-            "I3": [  ],
-            "I1": [ 9616 ],
-            "I0": [  ],
-            "COUT": [ 9613 ],
-            "CIN": [ 9618 ]
-          }
-        },
-        "counter_DFF_Q_8": {
-          "hide_name": 0,
-          "type": "DFF",
-          "parameters": {
-          },
-          "attributes": {
-            "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X3Y43/DFF4",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:7.5-9.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
-            "module_not_derived": "00000000000000000000000000000001"
-          },
-          "port_directions": {
-            "Q": "output",
-            "D": "input",
-            "CLK": "input"
-          },
-          "connections": {
-            "Q": [ 9616 ],
-            "D": [ 9615 ],
-            "CLK": [ 9498 ]
-          }
-        },
-        "counter_DFF_Q_7_D_ALU_SUM": {
-          "hide_name": 0,
-          "type": "ALU",
-          "parameters": {
-            "RAW_ALU_LUT": "00000000000000001100000011000000",
-            "ALU_MODE": "00000000000000000000000000000010"
-          },
-          "attributes": {
-            "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X3Y43/ALU5",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
-            "module_not_derived": "00000000000000000000000000000001"
-          },
-          "port_directions": {
-            "I2": "input",
-            "SUM": "output",
-            "I3": "input",
-            "I1": "input",
-            "I0": "input",
-            "COUT": "output",
-            "CIN": "input"
-          },
-          "connections": {
-            "I2": [ 9665 ],
-            "SUM": [ 9610 ],
-            "I3": [  ],
-            "I1": [ 9611 ],
-            "I0": [  ],
-            "COUT": [ 9608 ],
-            "CIN": [ 9613 ]
-          }
-        },
-        "counter_DFF_Q_7": {
-          "hide_name": 0,
-          "type": "DFF",
-          "parameters": {
-          },
-          "attributes": {
-            "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X3Y43/DFF5",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:7.5-9.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
-            "module_not_derived": "00000000000000000000000000000001"
-          },
-          "port_directions": {
-            "Q": "output",
-            "D": "input",
-            "CLK": "input"
-          },
-          "connections": {
-            "Q": [ 9611 ],
-            "D": [ 9610 ],
-            "CLK": [ 9498 ]
-          }
-        },
-        "counter_DFF_Q_6_D_ALU_SUM": {
-          "hide_name": 0,
-          "type": "ALU",
-          "parameters": {
-            "RAW_ALU_LUT": "00000000000000001100000011000000",
-            "ALU_MODE": "00000000000000000000000000000010"
-          },
-          "attributes": {
-            "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X4Y43/ALU0",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
-            "module_not_derived": "00000000000000000000000000000001"
-          },
-          "port_directions": {
-            "I2": "input",
-            "SUM": "output",
-            "I3": "input",
-            "I1": "input",
-            "I0": "input",
-            "COUT": "output",
-            "CIN": "input"
-          },
-          "connections": {
-            "I2": [ 9665 ],
-            "SUM": [ 9605 ],
-            "I3": [  ],
-            "I1": [ 9606 ],
-            "I0": [  ],
-            "COUT": [ 9603 ],
-            "CIN": [ 9608 ]
-          }
-        },
-        "counter_DFF_Q_6": {
-          "hide_name": 0,
-          "type": "DFF",
-          "parameters": {
-          },
-          "attributes": {
-            "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X4Y44/DFF0",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:7.5-9.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
-            "module_not_derived": "00000000000000000000000000000001"
-          },
-          "port_directions": {
-            "Q": "output",
-            "D": "input",
-            "CLK": "input"
-          },
-          "connections": {
-            "Q": [ 9606 ],
-            "D": [ 9712 ],
-            "CLK": [ 9498 ]
-          }
-        },
-        "counter_DFF_Q_5_D_ALU_SUM": {
-          "hide_name": 0,
-          "type": "ALU",
-          "parameters": {
-            "RAW_ALU_LUT": "00000000000000001100000011000000",
-            "ALU_MODE": "00000000000000000000000000000010"
-          },
-          "attributes": {
-            "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X4Y43/ALU1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
-            "module_not_derived": "00000000000000000000000000000001"
-          },
-          "port_directions": {
-            "I2": "input",
-            "SUM": "output",
-            "I3": "input",
-            "I1": "input",
-            "I0": "input",
-            "COUT": "output",
-            "CIN": "input"
-          },
-          "connections": {
-            "I2": [ 9665 ],
-            "SUM": [ 9600 ],
-            "I3": [  ],
-            "I1": [ 9601 ],
-            "I0": [  ],
-            "COUT": [ 9598 ],
-            "CIN": [ 9603 ]
-          }
-        },
-        "counter_DFF_Q_5": {
-          "hide_name": 0,
-          "type": "DFF",
-          "parameters": {
-          },
-          "attributes": {
-            "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X4Y43/DFF1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:7.5-9.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
-            "module_not_derived": "00000000000000000000000000000001"
-          },
-          "port_directions": {
-            "Q": "output",
-            "D": "input",
-            "CLK": "input"
-          },
-          "connections": {
-            "Q": [ 9601 ],
-            "D": [ 9600 ],
-            "CLK": [ 9498 ]
-          }
-        },
-        "counter_DFF_Q_4_D_ALU_SUM": {
-          "hide_name": 0,
-          "type": "ALU",
-          "parameters": {
-            "RAW_ALU_LUT": "00000000000000001100000011000000",
-            "ALU_MODE": "00000000000000000000000000000010"
-          },
-          "attributes": {
-            "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X4Y43/ALU2",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
-            "module_not_derived": "00000000000000000000000000000001"
-          },
-          "port_directions": {
-            "I2": "input",
-            "SUM": "output",
-            "I3": "input",
-            "I1": "input",
-            "I0": "input",
-            "COUT": "output",
-            "CIN": "input"
-          },
-          "connections": {
-            "I2": [ 9665 ],
-            "SUM": [ 9595 ],
-            "I3": [  ],
-            "I1": [ 9596 ],
-            "I0": [  ],
-            "COUT": [ 9593 ],
-            "CIN": [ 9598 ]
-          }
-        },
-        "counter_DFF_Q_4": {
-          "hide_name": 0,
-          "type": "DFF",
-          "parameters": {
-          },
-          "attributes": {
-            "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X4Y43/DFF2",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:7.5-9.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
-            "module_not_derived": "00000000000000000000000000000001"
-          },
-          "port_directions": {
-            "Q": "output",
-            "D": "input",
-            "CLK": "input"
-          },
-          "connections": {
-            "Q": [ 9596 ],
-            "D": [ 9595 ],
-            "CLK": [ 9498 ]
+            "V": [ 9754 ]
           }
         },
         "counter_DFF_Q_3_D_ALU_SUM": {
@@ -869,8 +1455,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X4Y43/ALU3",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "NEXTPNR_BEL": "X2Y47/ALU0",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -883,13 +1469,13 @@
             "CIN": "input"
           },
           "connections": {
-            "I2": [ 9665 ],
-            "SUM": [ 9590 ],
+            "I2": [ 9754 ],
+            "SUM": [ 9641 ],
             "I3": [  ],
-            "I1": [ 9591 ],
+            "I1": [ 9642 ],
             "I0": [  ],
-            "COUT": [ 9588 ],
-            "CIN": [ 9593 ]
+            "COUT": [ 9638 ],
+            "CIN": [ 9644 ]
           }
         },
         "counter_DFF_Q_3": {
@@ -899,8 +1485,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X4Y44/DFF1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:7.5-9.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
+            "NEXTPNR_BEL": "X2Y47/DFF0",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:10.5-12.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -909,9 +1495,9 @@
             "CLK": "input"
           },
           "connections": {
-            "Q": [ 9591 ],
-            "D": [ 9714 ],
-            "CLK": [ 9498 ]
+            "Q": [ 9642 ],
+            "D": [ 9641 ],
+            "CLK": [ 9517 ]
           }
         },
         "counter_DFF_Q_2_D_ALU_SUM": {
@@ -923,8 +1509,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X4Y43/ALU4",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "NEXTPNR_BEL": "X2Y47/ALU1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -937,34 +1523,315 @@
             "CIN": "input"
           },
           "connections": {
-            "I2": [ 9665 ],
-            "SUM": [ 9564 ],
+            "I2": [ 9754 ],
+            "SUM": [ 9590 ],
             "I3": [  ],
-            "I1": [ 9565 ],
+            "I1": [ 9591 ],
             "I0": [  ],
-            "COUT": [ 9561 ],
-            "CIN": [ 9588 ]
+            "COUT": [ 9639 ],
+            "CIN": [ 9638 ]
           }
         },
-        "counter_DFF_Q_23_D_LUT1_F": {
+        "counter_DFF_Q_28_D_ALU_SUM": {
           "hide_name": 0,
-          "type": "LUT1",
+          "type": "ALU",
           "parameters": {
-            "INIT": "01"
+            "RAW_ALU_LUT": "00000000000000001100000011000000",
+            "ALU_MODE": "00000000000000000000000000000010"
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X1Y42/LUT0",
-            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:135.23-136.15",
+            "NEXTPNR_BEL": "X3Y47/ALU0",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
             "I0": "input",
-            "F": "output"
+            "COUT": "output",
+            "CIN": "input"
           },
           "connections": {
-            "I0": [ 9582 ],
-            "F": [ 9585 ]
+            "I2": [ 9754 ],
+            "SUM": [ 9633 ],
+            "I3": [  ],
+            "I1": [ 9634 ],
+            "I0": [  ],
+            "COUT": [ 9631 ],
+            "CIN": [ 9636 ]
+          }
+        },
+        "counter_DFF_Q_28": {
+          "hide_name": 0,
+          "type": "DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y47/DFF0",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:10.5-12.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "Q": [ 9634 ],
+            "D": [ 9633 ],
+            "CLK": [ 9517 ]
+          }
+        },
+        "counter_DFF_Q_27_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "RAW_ALU_LUT": "00000000000000001100000011000000",
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y47/ALU1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9754 ],
+            "SUM": [ 9628 ],
+            "I3": [  ],
+            "I1": [ 9629 ],
+            "I0": [  ],
+            "COUT": [ 9626 ],
+            "CIN": [ 9631 ]
+          }
+        },
+        "counter_DFF_Q_27": {
+          "hide_name": 0,
+          "type": "DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y47/DFF1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:10.5-12.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "Q": [ 9629 ],
+            "D": [ 9628 ],
+            "CLK": [ 9517 ]
+          }
+        },
+        "counter_DFF_Q_26_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "RAW_ALU_LUT": "00000000000000001100000011000000",
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y47/ALU2",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9754 ],
+            "SUM": [ 9623 ],
+            "I3": [  ],
+            "I1": [ 9624 ],
+            "I0": [  ],
+            "COUT": [ 9621 ],
+            "CIN": [ 9626 ]
+          }
+        },
+        "counter_DFF_Q_26": {
+          "hide_name": 0,
+          "type": "DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y47/DFF2",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:10.5-12.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "Q": [ 9624 ],
+            "D": [ 9623 ],
+            "CLK": [ 9517 ]
+          }
+        },
+        "counter_DFF_Q_25_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "RAW_ALU_LUT": "00000000000000001100000011000000",
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y47/ALU3",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9754 ],
+            "SUM": [ 9618 ],
+            "I3": [  ],
+            "I1": [ 9619 ],
+            "I0": [  ],
+            "COUT": [ 9616 ],
+            "CIN": [ 9621 ]
+          }
+        },
+        "counter_DFF_Q_25": {
+          "hide_name": 0,
+          "type": "DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y47/DFF3",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:10.5-12.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "Q": [ 9619 ],
+            "D": [ 9618 ],
+            "CLK": [ 9517 ]
+          }
+        },
+        "counter_DFF_Q_24_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "RAW_ALU_LUT": "00000000000000001100000011000000",
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y47/ALU4",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9754 ],
+            "SUM": [ 9613 ],
+            "I3": [  ],
+            "I1": [ 9614 ],
+            "I0": [  ],
+            "COUT": [ 9611 ],
+            "CIN": [ 9616 ]
+          }
+        },
+        "counter_DFF_Q_24": {
+          "hide_name": 0,
+          "type": "DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y47/DFF4",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:10.5-12.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "Q": [ 9614 ],
+            "D": [ 9613 ],
+            "CLK": [ 9517 ]
+          }
+        },
+        "counter_DFF_Q_23_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "RAW_ALU_LUT": "00000000000000001100000011000000",
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y47/ALU5",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9754 ],
+            "SUM": [ 9608 ],
+            "I3": [  ],
+            "I1": [ 9609 ],
+            "I0": [  ],
+            "COUT": [ 9606 ],
+            "CIN": [ 9611 ]
           }
         },
         "counter_DFF_Q_23": {
@@ -974,8 +1841,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X1Y42/DFF0",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:7.5-9.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
+            "NEXTPNR_BEL": "X3Y48/DFF1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:10.5-12.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -984,41 +1851,9 @@
             "CLK": "input"
           },
           "connections": {
-            "Q": [ 9582 ],
-            "D": [ 9585 ],
-            "CLK": [ 9498 ]
-          }
-        },
-        "counter_DFF_Q_22_D_ALU_SUM_CIN_ALU_COUT": {
-          "hide_name": 0,
-          "type": "ALU",
-          "parameters": {
-            "RAW_ALU_LUT": "00000000000000000011000000111111",
-            "ALU_MODE": "00000000000000000000000000000010"
-          },
-          "attributes": {
-            "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X1Y43/ALU1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
-            "module_not_derived": "00000000000000000000000000000001"
-          },
-          "port_directions": {
-            "I2": "input",
-            "SUM": "output",
-            "I3": "input",
-            "I1": "input",
-            "I0": "input",
-            "COUT": "output",
-            "CIN": "input"
-          },
-          "connections": {
-            "I2": [ 9665 ],
-            "SUM": [ 9583 ],
-            "I3": [  ],
-            "I1": [ 9582 ],
-            "I0": [  ],
-            "COUT": [ 9580 ],
-            "CIN": [ 9670 ]
+            "Q": [ 9609 ],
+            "D": [ 9804 ],
+            "CLK": [ 9517 ]
           }
         },
         "counter_DFF_Q_22_D_ALU_SUM": {
@@ -1030,8 +1865,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X1Y43/ALU2",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "NEXTPNR_BEL": "X4Y47/ALU0",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -1044,13 +1879,13 @@
             "CIN": "input"
           },
           "connections": {
-            "I2": [ 9665 ],
-            "SUM": [ 9577 ],
+            "I2": [ 9754 ],
+            "SUM": [ 9603 ],
             "I3": [  ],
-            "I1": [ 9578 ],
+            "I1": [ 9604 ],
             "I0": [  ],
-            "COUT": [ 9575 ],
-            "CIN": [ 9580 ]
+            "COUT": [ 9601 ],
+            "CIN": [ 9606 ]
           }
         },
         "counter_DFF_Q_22": {
@@ -1060,8 +1895,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X1Y43/DFF2",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:7.5-9.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
+            "NEXTPNR_BEL": "X4Y47/DFF0",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:10.5-12.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -1070,9 +1905,9 @@
             "CLK": "input"
           },
           "connections": {
-            "Q": [ 9578 ],
-            "D": [ 9577 ],
-            "CLK": [ 9498 ]
+            "Q": [ 9604 ],
+            "D": [ 9603 ],
+            "CLK": [ 9517 ]
           }
         },
         "counter_DFF_Q_21_D_ALU_SUM": {
@@ -1084,8 +1919,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X1Y43/ALU3",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "NEXTPNR_BEL": "X4Y47/ALU1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -1098,13 +1933,13 @@
             "CIN": "input"
           },
           "connections": {
-            "I2": [ 9665 ],
-            "SUM": [ 9572 ],
+            "I2": [ 9754 ],
+            "SUM": [ 9598 ],
             "I3": [  ],
-            "I1": [ 9573 ],
+            "I1": [ 9599 ],
             "I0": [  ],
-            "COUT": [ 9570 ],
-            "CIN": [ 9575 ]
+            "COUT": [ 9596 ],
+            "CIN": [ 9601 ]
           }
         },
         "counter_DFF_Q_21": {
@@ -1114,8 +1949,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X1Y43/DFF3",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:7.5-9.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
+            "NEXTPNR_BEL": "X4Y47/DFF1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:10.5-12.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -1124,9 +1959,9 @@
             "CLK": "input"
           },
           "connections": {
-            "Q": [ 9573 ],
-            "D": [ 9572 ],
-            "CLK": [ 9498 ]
+            "Q": [ 9599 ],
+            "D": [ 9598 ],
+            "CLK": [ 9517 ]
           }
         },
         "counter_DFF_Q_20_D_ALU_SUM": {
@@ -1138,8 +1973,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X1Y43/ALU4",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "NEXTPNR_BEL": "X4Y47/ALU2",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -1152,13 +1987,13 @@
             "CIN": "input"
           },
           "connections": {
-            "I2": [ 9665 ],
-            "SUM": [ 9567 ],
+            "I2": [ 9754 ],
+            "SUM": [ 9593 ],
             "I3": [  ],
-            "I1": [ 9568 ],
+            "I1": [ 9594 ],
             "I0": [  ],
-            "COUT": [ 9559 ],
-            "CIN": [ 9570 ]
+            "COUT": [ 9585 ],
+            "CIN": [ 9596 ]
           }
         },
         "counter_DFF_Q_20": {
@@ -1168,8 +2003,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X1Y43/DFF4",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:7.5-9.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
+            "NEXTPNR_BEL": "X4Y47/DFF2",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:10.5-12.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -1178,9 +2013,9 @@
             "CLK": "input"
           },
           "connections": {
-            "Q": [ 9568 ],
-            "D": [ 9567 ],
-            "CLK": [ 9498 ]
+            "Q": [ 9594 ],
+            "D": [ 9593 ],
+            "CLK": [ 9517 ]
           }
         },
         "counter_DFF_Q_2": {
@@ -1190,8 +2025,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X4Y43/DFF4",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:7.5-9.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
+            "NEXTPNR_BEL": "X2Y48/DFF3",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:10.5-12.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -1200,9 +2035,9 @@
             "CLK": "input"
           },
           "connections": {
-            "Q": [ 9565 ],
-            "D": [ 9564 ],
-            "CLK": [ 9498 ]
+            "Q": [ 9591 ],
+            "D": [ 9806 ],
+            "CLK": [ 9517 ]
           }
         },
         "counter_DFF_Q_1_D_ALU_SUM": {
@@ -1214,8 +2049,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X4Y43/ALU5",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "NEXTPNR_BEL": "X2Y47/ALU3",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -1228,13 +2063,13 @@
             "CIN": "input"
           },
           "connections": {
-            "I2": [ 9665 ],
-            "SUM": [ 9505 ],
+            "I2": [ 9754 ],
+            "SUM": [ 9523 ],
             "I3": [  ],
-            "I1": [ 9506 ],
+            "I1": [ 9524 ],
             "I0": [  ],
-            "COUT": [ 9562 ],
-            "CIN": [ 9561 ]
+            "COUT": [ 9588 ],
+            "CIN": [ 9587 ]
           }
         },
         "counter_DFF_Q_19_D_ALU_SUM": {
@@ -1246,8 +2081,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X1Y43/ALU5",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "NEXTPNR_BEL": "X4Y47/ALU3",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -1260,13 +2095,13 @@
             "CIN": "input"
           },
           "connections": {
-            "I2": [ 9665 ],
-            "SUM": [ 9556 ],
+            "I2": [ 9754 ],
+            "SUM": [ 9581 ],
             "I3": [  ],
-            "I1": [ 9557 ],
+            "I1": [ 9583 ],
             "I0": [  ],
-            "COUT": [ 9554 ],
-            "CIN": [ 9559 ]
+            "COUT": [ 9579 ],
+            "CIN": [ 9585 ]
           }
         },
         "counter_DFF_Q_19": {
@@ -1276,8 +2111,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X1Y43/DFF5",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:7.5-9.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
+            "NEXTPNR_BEL": "X4Y47/DFF3",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:10.5-12.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -1286,9 +2121,9 @@
             "CLK": "input"
           },
           "connections": {
-            "Q": [ 9557 ],
-            "D": [ 9556 ],
-            "CLK": [ 9498 ]
+            "Q": [ 9583 ],
+            "D": [ 9581 ],
+            "CLK": [ 9517 ]
           }
         },
         "counter_DFF_Q_18_D_ALU_SUM": {
@@ -1300,8 +2135,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X2Y43/ALU0",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "NEXTPNR_BEL": "X4Y47/ALU4",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -1314,13 +2149,13 @@
             "CIN": "input"
           },
           "connections": {
-            "I2": [ 9665 ],
-            "SUM": [ 9551 ],
+            "I2": [ 9754 ],
+            "SUM": [ 9575 ],
             "I3": [  ],
-            "I1": [ 9552 ],
+            "I1": [ 9577 ],
             "I0": [  ],
-            "COUT": [ 9549 ],
-            "CIN": [ 9554 ]
+            "COUT": [ 9573 ],
+            "CIN": [ 9579 ]
           }
         },
         "counter_DFF_Q_18": {
@@ -1330,8 +2165,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X2Y43/DFF0",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:7.5-9.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
+            "NEXTPNR_BEL": "X4Y47/DFF4",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:10.5-12.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -1340,9 +2175,9 @@
             "CLK": "input"
           },
           "connections": {
-            "Q": [ 9552 ],
-            "D": [ 9551 ],
-            "CLK": [ 9498 ]
+            "Q": [ 9577 ],
+            "D": [ 9575 ],
+            "CLK": [ 9517 ]
           }
         },
         "counter_DFF_Q_17_D_ALU_SUM": {
@@ -1354,8 +2189,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X2Y43/ALU1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "NEXTPNR_BEL": "X4Y47/ALU5",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -1368,13 +2203,13 @@
             "CIN": "input"
           },
           "connections": {
-            "I2": [ 9665 ],
-            "SUM": [ 9546 ],
+            "I2": [ 9754 ],
+            "SUM": [ 9569 ],
             "I3": [  ],
-            "I1": [ 9547 ],
+            "I1": [ 9571 ],
             "I0": [  ],
-            "COUT": [ 9544 ],
-            "CIN": [ 9549 ]
+            "COUT": [ 9567 ],
+            "CIN": [ 9573 ]
           }
         },
         "counter_DFF_Q_17": {
@@ -1384,8 +2219,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X2Y43/DFF1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:7.5-9.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
+            "NEXTPNR_BEL": "X4Y46/DFF1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:10.5-12.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -1394,9 +2229,9 @@
             "CLK": "input"
           },
           "connections": {
-            "Q": [ 9547 ],
-            "D": [ 9546 ],
-            "CLK": [ 9498 ]
+            "Q": [ 9571 ],
+            "D": [ 9808 ],
+            "CLK": [ 9517 ]
           }
         },
         "counter_DFF_Q_16_D_ALU_SUM": {
@@ -1408,8 +2243,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X2Y43/ALU2",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "NEXTPNR_BEL": "X5Y47/ALU0",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -1422,13 +2257,13 @@
             "CIN": "input"
           },
           "connections": {
-            "I2": [ 9665 ],
-            "SUM": [ 9541 ],
+            "I2": [ 9754 ],
+            "SUM": [ 9563 ],
             "I3": [  ],
-            "I1": [ 9542 ],
+            "I1": [ 9565 ],
             "I0": [  ],
-            "COUT": [ 9539 ],
-            "CIN": [ 9544 ]
+            "COUT": [ 9561 ],
+            "CIN": [ 9567 ]
           }
         },
         "counter_DFF_Q_16": {
@@ -1438,8 +2273,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X2Y43/DFF2",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:7.5-9.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
+            "NEXTPNR_BEL": "X5Y46/DFF2",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:10.5-12.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -1448,9 +2283,9 @@
             "CLK": "input"
           },
           "connections": {
-            "Q": [ 9542 ],
-            "D": [ 9541 ],
-            "CLK": [ 9498 ]
+            "Q": [ 9565 ],
+            "D": [ 9810 ],
+            "CLK": [ 9517 ]
           }
         },
         "counter_DFF_Q_15_D_ALU_SUM": {
@@ -1462,8 +2297,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X2Y43/ALU3",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "NEXTPNR_BEL": "X5Y47/ALU1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -1476,13 +2311,13 @@
             "CIN": "input"
           },
           "connections": {
-            "I2": [ 9665 ],
-            "SUM": [ 9536 ],
+            "I2": [ 9754 ],
+            "SUM": [ 9557 ],
             "I3": [  ],
-            "I1": [ 9537 ],
+            "I1": [ 9559 ],
             "I0": [  ],
-            "COUT": [ 9534 ],
-            "CIN": [ 9539 ]
+            "COUT": [ 9555 ],
+            "CIN": [ 9561 ]
           }
         },
         "counter_DFF_Q_15": {
@@ -1492,8 +2327,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X2Y43/DFF3",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:7.5-9.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
+            "NEXTPNR_BEL": "X5Y46/DFF0",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:10.5-12.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -1502,9 +2337,9 @@
             "CLK": "input"
           },
           "connections": {
-            "Q": [ 9537 ],
-            "D": [ 9536 ],
-            "CLK": [ 9498 ]
+            "Q": [ 9559 ],
+            "D": [ 9812 ],
+            "CLK": [ 9517 ]
           }
         },
         "counter_DFF_Q_14_D_ALU_SUM": {
@@ -1516,8 +2351,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X2Y43/ALU4",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "NEXTPNR_BEL": "X5Y47/ALU2",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -1530,13 +2365,13 @@
             "CIN": "input"
           },
           "connections": {
-            "I2": [ 9665 ],
-            "SUM": [ 9531 ],
+            "I2": [ 9754 ],
+            "SUM": [ 9551 ],
             "I3": [  ],
-            "I1": [ 9532 ],
+            "I1": [ 9553 ],
             "I0": [  ],
-            "COUT": [ 9529 ],
-            "CIN": [ 9534 ]
+            "COUT": [ 9549 ],
+            "CIN": [ 9555 ]
           }
         },
         "counter_DFF_Q_14": {
@@ -1546,8 +2381,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X2Y43/DFF4",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:7.5-9.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
+            "NEXTPNR_BEL": "X5Y47/DFF2",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:10.5-12.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -1556,9 +2391,9 @@
             "CLK": "input"
           },
           "connections": {
-            "Q": [ 9532 ],
-            "D": [ 9531 ],
-            "CLK": [ 9498 ]
+            "Q": [ 9553 ],
+            "D": [ 9551 ],
+            "CLK": [ 9517 ]
           }
         },
         "counter_DFF_Q_13_D_ALU_SUM": {
@@ -1570,8 +2405,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X2Y43/ALU5",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "NEXTPNR_BEL": "X5Y47/ALU3",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -1584,13 +2419,13 @@
             "CIN": "input"
           },
           "connections": {
-            "I2": [ 9665 ],
-            "SUM": [ 9526 ],
+            "I2": [ 9754 ],
+            "SUM": [ 9545 ],
             "I3": [  ],
-            "I1": [ 9527 ],
+            "I1": [ 9547 ],
             "I0": [  ],
-            "COUT": [ 9524 ],
-            "CIN": [ 9529 ]
+            "COUT": [ 9543 ],
+            "CIN": [ 9549 ]
           }
         },
         "counter_DFF_Q_13": {
@@ -1600,8 +2435,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X2Y43/DFF5",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:7.5-9.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
+            "NEXTPNR_BEL": "X5Y47/DFF3",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:10.5-12.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -1610,9 +2445,9 @@
             "CLK": "input"
           },
           "connections": {
-            "Q": [ 9527 ],
-            "D": [ 9526 ],
-            "CLK": [ 9498 ]
+            "Q": [ 9547 ],
+            "D": [ 9545 ],
+            "CLK": [ 9517 ]
           }
         },
         "counter_DFF_Q_12_D_ALU_SUM": {
@@ -1624,8 +2459,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X3Y43/ALU0",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "NEXTPNR_BEL": "X5Y47/ALU4",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -1638,13 +2473,13 @@
             "CIN": "input"
           },
           "connections": {
-            "I2": [ 9665 ],
-            "SUM": [ 9521 ],
+            "I2": [ 9754 ],
+            "SUM": [ 9539 ],
             "I3": [  ],
-            "I1": [ 9522 ],
+            "I1": [ 9541 ],
             "I0": [  ],
-            "COUT": [ 9519 ],
-            "CIN": [ 9524 ]
+            "COUT": [ 9534 ],
+            "CIN": [ 9543 ]
           }
         },
         "counter_DFF_Q_12": {
@@ -1654,8 +2489,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X3Y43/DFF0",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:7.5-9.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
+            "NEXTPNR_BEL": "X6Y47/DFF4",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:10.5-12.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -1664,9 +2499,9 @@
             "CLK": "input"
           },
           "connections": {
-            "Q": [ 9522 ],
-            "D": [ 9521 ],
-            "CLK": [ 9498 ]
+            "Q": [ 9541 ],
+            "D": [ 9814 ],
+            "CLK": [ 9517 ]
           }
         },
         "counter_DFF_Q_11_D_ALU_SUM": {
@@ -1678,8 +2513,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X3Y43/ALU1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "NEXTPNR_BEL": "X5Y47/ALU5",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -1692,13 +2527,13 @@
             "CIN": "input"
           },
           "connections": {
-            "I2": [ 9665 ],
-            "SUM": [ 9516 ],
+            "I2": [ 9754 ],
+            "SUM": [ 9530 ],
             "I3": [  ],
-            "I1": [ 9517 ],
+            "I1": [ 9532 ],
             "I0": [  ],
-            "COUT": [ 9511 ],
-            "CIN": [ 9519 ]
+            "COUT": [ 9535 ],
+            "CIN": [ 9534 ]
           }
         },
         "counter_DFF_Q_11": {
@@ -1708,8 +2543,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X3Y43/DFF1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:7.5-9.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
+            "NEXTPNR_BEL": "X6Y47/DFF2",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:10.5-12.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -1718,41 +2553,30 @@
             "CLK": "input"
           },
           "connections": {
-            "Q": [ 9517 ],
-            "D": [ 9516 ],
-            "CLK": [ 9498 ]
+            "Q": [ 9532 ],
+            "D": [ 9816 ],
+            "CLK": [ 9517 ]
           }
         },
-        "counter_DFF_Q_10_D_ALU_SUM": {
+        "counter_DFF_Q_10_D_LUT1_F": {
           "hide_name": 0,
-          "type": "ALU",
+          "type": "LUT1",
           "parameters": {
-            "RAW_ALU_LUT": "00000000000000001100000011000000",
-            "ALU_MODE": "00000000000000000000000000000010"
+            "INIT": "01"
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X3Y43/ALU2",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "NEXTPNR_BEL": "X1Y48/LUT0",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:135.23-136.15",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
-            "I2": "input",
-            "SUM": "output",
-            "I3": "input",
-            "I1": "input",
             "I0": "input",
-            "COUT": "output",
-            "CIN": "input"
+            "F": "output"
           },
           "connections": {
-            "I2": [ 9665 ],
-            "SUM": [ 9508 ],
-            "I3": [  ],
-            "I1": [ 9509 ],
-            "I0": [  ],
-            "COUT": [ 9512 ],
-            "CIN": [ 9511 ]
+            "I0": [ 9527 ],
+            "F": [ 9526 ]
           }
         },
         "counter_DFF_Q_10": {
@@ -1762,8 +2586,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X3Y44/DFF4",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:7.5-9.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
+            "NEXTPNR_BEL": "X1Y48/DFF0",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:10.5-12.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -1772,9 +2596,9 @@
             "CLK": "input"
           },
           "connections": {
-            "Q": [ 9509 ],
-            "D": [ 9716 ],
-            "CLK": [ 9498 ]
+            "Q": [ 9527 ],
+            "D": [ 9526 ],
+            "CLK": [ 9517 ]
           }
         },
         "counter_DFF_Q_1": {
@@ -1784,8 +2608,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X4Y43/DFF5",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:7.5-9.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
+            "NEXTPNR_BEL": "X2Y47/DFF3",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:10.5-12.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -1794,9 +2618,9 @@
             "CLK": "input"
           },
           "connections": {
-            "Q": [ 9506 ],
-            "D": [ 9505 ],
-            "CLK": [ 9498 ]
+            "Q": [ 9524 ],
+            "D": [ 9523 ],
+            "CLK": [ 9517 ]
           }
         },
         "counter_DFF_Q": {
@@ -1806,8 +2630,8 @@
           },
           "attributes": {
             "BEL_STRENGTH": "00000000000000000000000000000001",
-            "NEXTPNR_BEL": "X5Y43/DFF5",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:7.5-9.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
+            "NEXTPNR_BEL": "X1Y47/DFF3",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:10.5-12.8|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:13.6-13.47",
             "module_not_derived": "00000000000000000000000000000001"
           },
           "port_directions": {
@@ -1816,9 +2640,9 @@
             "CLK": "input"
           },
           "connections": {
-            "Q": [ 9502 ],
-            "D": [ 9718 ],
-            "CLK": [ 9498 ]
+            "Q": [ 9520 ],
+            "D": [ 9519 ],
+            "CLK": [ 9517 ]
           }
         },
         "clk_IBUF_I": {
@@ -1841,754 +2665,1152 @@
             "I": "input"
           },
           "connections": {
-            "O": [ 9498 ],
+            "O": [ 9517 ],
+            "I": [ 9496 ]
+          }
+        },
+        "btn2_IBUF_I_O_IBUF_O": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X55Y29/IOBA",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:3.23-3.27",
+            "&IO_TYPE=LVCMOS33": "00000000000000000000000000000001",
+            "&PULL_MODE=UP": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9510 ],
             "I": [ 9494 ]
+          }
+        },
+        "btn2_IBUF_I": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X55Y29/IOBB",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:4.23-4.27",
+            "&IO_TYPE=LVCMOS33": "00000000000000000000000000000001",
+            "&PULL_MODE=UP": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9501 ],
+            "I": [ 9495 ]
           }
         }
       },
       "netnames": {
-        "counter_DFF_Q$conn$D": {
+        "btn2_IBUF_I_O[0]$gate_net$": {
           "hide_name": 0,
-          "bits": [ 9718 ] ,
+          "bits": [ 9819 ] ,
           "attributes": {
-            "ROUTING": "X5Y43/F5;;1;X5Y43/XD5;X5Y43/XD5/F5;1"
+            "ROUTING": " "
           }
         },
-        "counter_DFF_Q_10$conn$D": {
+        "btn2_IBUF_I_O[1]$gate_net$": {
           "hide_name": 0,
-          "bits": [ 9716 ] ,
+          "bits": [ 9818 ] ,
           "attributes": {
-            "ROUTING": "X3Y44/F4;;1;X3Y44/XD4;X3Y44/XD4/F4;1"
+            "ROUTING": " "
           }
         },
-        "counter_DFF_Q_3$conn$D": {
+        "counter_DFF_Q_11$conn$D": {
           "hide_name": 0,
-          "bits": [ 9714 ] ,
+          "bits": [ 9816 ] ,
           "attributes": {
-            "ROUTING": "X4Y44/F1;;1;X4Y44/XD1;X4Y44/XD1/F1;1"
+            "ROUTING": "X6Y47/F2;;1;X6Y47/XD2;X6Y47/XD2/F2;1"
           }
         },
-        "counter_DFF_Q_6$conn$D": {
+        "counter_DFF_Q_12$conn$D": {
           "hide_name": 0,
-          "bits": [ 9712 ] ,
+          "bits": [ 9814 ] ,
           "attributes": {
-            "ROUTING": "X4Y44/F0;;1;X4Y44/XD0;X4Y44/XD0/F0;1"
+            "ROUTING": "X6Y47/F4;;1;X6Y47/XD4;X6Y47/XD4/F4;1"
+          }
+        },
+        "counter_DFF_Q_15$conn$D": {
+          "hide_name": 0,
+          "bits": [ 9812 ] ,
+          "attributes": {
+            "ROUTING": "X5Y46/F0;;1;X5Y46/XD0;X5Y46/XD0/F0;1"
+          }
+        },
+        "counter_DFF_Q_16$conn$D": {
+          "hide_name": 0,
+          "bits": [ 9810 ] ,
+          "attributes": {
+            "ROUTING": "X5Y46/F2;;1;X5Y46/XD2;X5Y46/XD2/F2;1"
+          }
+        },
+        "counter_DFF_Q_17$conn$D": {
+          "hide_name": 0,
+          "bits": [ 9808 ] ,
+          "attributes": {
+            "ROUTING": "X4Y46/F1;;1;X4Y46/XD1;X4Y46/XD1/F1;1"
+          }
+        },
+        "counter_DFF_Q_2$conn$D": {
+          "hide_name": 0,
+          "bits": [ 9806 ] ,
+          "attributes": {
+            "ROUTING": "X2Y48/F3;;1;X2Y48/XD3;X2Y48/XD3/F3;1"
+          }
+        },
+        "counter_DFF_Q_23$conn$D": {
+          "hide_name": 0,
+          "bits": [ 9804 ] ,
+          "attributes": {
+            "ROUTING": "X3Y48/F1;;1;X3Y48/XD1;X3Y48/XD1/F1;1"
           }
         },
         "clk_IBUF_I_O_BUFG$conn$I": {
           "hide_name": 0,
-          "bits": [ 9699 ] ,
+          "bits": [ 9791 ] ,
           "attributes": {
             "ROUTING": " "
           }
         },
-        "counter_DFF_Q_22_D_ALU_SUM_CIN_ALU_COUT_HEAD_ALULC": {
+        "counter_DFF_Q_4_D_ALU_SUM_CIN_ALU_COUT_HEAD_ALULC": {
           "hide_name": 0,
-          "bits": [ 9670 ] ,
+          "bits": [ 9759 ] ,
           "attributes": {
-            "ROUTING": "X1Y43/COUT0;;1"
+            "ROUTING": "X1Y47/COUT0;;1"
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_I3_MUX2_LUT5_O_I1": {
+          "hide_name": 0,
+          "bits": [ 9736 ] ,
+          "attributes": {
+            "ROUTING": "X3Y46/F1;;1",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:151.13-151.15"
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_I3_MUX2_LUT5_O_I0": {
+          "hide_name": 0,
+          "bits": [ 9735 ] ,
+          "attributes": {
+            "ROUTING": "X3Y46/F0;;1",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:151.9-151.11"
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_5_I3_MUX2_LUT5_O_I1": {
+          "hide_name": 0,
+          "bits": [ 9731 ] ,
+          "attributes": {
+            "ROUTING": "X6Y47/F7;;1",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:151.13-151.15"
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_5_I3_MUX2_LUT5_O_I0": {
+          "hide_name": 0,
+          "bits": [ 9730 ] ,
+          "attributes": {
+            "ROUTING": "X6Y47/F6;;1",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:151.9-151.11"
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_5_I3[3]": {
+          "hide_name": 0,
+          "bits": [ 9728 ] ,
+          "attributes": {
+            "ROUTING": "X6Y47/OF6;;1;X6Y47/S260;X6Y47/S260/OF6;1;X6Y47/D1;X6Y47/D1/S260;1",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_4_I3_MUX2_LUT5_O_I1": {
+          "hide_name": 0,
+          "bits": [ 9724 ] ,
+          "attributes": {
+            "ROUTING": "X2Y46/F1;;1",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:151.13-151.15"
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_4_I3_MUX2_LUT5_O_I0": {
+          "hide_name": 0,
+          "bits": [ 9723 ] ,
+          "attributes": {
+            "ROUTING": "X2Y46/F0;;1",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:151.9-151.11"
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_4_I3[3]": {
+          "hide_name": 0,
+          "bits": [ 9721 ] ,
+          "attributes": {
+            "ROUTING": "X2Y46/OF0;;1;X2Y46/W100;X2Y46/W100/OF0;1;X1Y46/W200;X1Y46/W200/W101;1;X0Y46/E200;X0Y46/E200/E202;1;X2Y46/D6;X2Y46/D6/E202;1",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_3_I3_MUX2_LUT5_O_I1": {
+          "hide_name": 0,
+          "bits": [ 9717 ] ,
+          "attributes": {
+            "ROUTING": "X4Y46/F3;;1",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:151.13-151.15"
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_3_I3_MUX2_LUT5_O_I0": {
+          "hide_name": 0,
+          "bits": [ 9716 ] ,
+          "attributes": {
+            "ROUTING": "X4Y46/F2;;1",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:151.9-151.11"
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_3_I3[3]": {
+          "hide_name": 0,
+          "bits": [ 9714 ] ,
+          "attributes": {
+            "ROUTING": "X4Y46/OF2;;1;X4Y46/W220;X4Y46/W220/OF2;1;X2Y46/D5;X2Y46/D5/W222;1",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_2_I3_MUX2_LUT5_O_I1": {
+          "hide_name": 0,
+          "bits": [ 9710 ] ,
+          "attributes": {
+            "ROUTING": "X4Y46/F5;;1",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:151.13-151.15"
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_2_I3_MUX2_LUT5_O_I0": {
+          "hide_name": 0,
+          "bits": [ 9709 ] ,
+          "attributes": {
+            "ROUTING": "X4Y46/F4;;1",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:151.9-151.11"
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_2_I3[3]": {
+          "hide_name": 0,
+          "bits": [ 9707 ] ,
+          "attributes": {
+            "ROUTING": "X4Y46/OF4;;1;X4Y46/EW20;X4Y46/EW20/OF4;1;X3Y46/W820;X3Y46/W820/W121;1;X4Y46/W100;X4Y46/W100/E828;1;X4Y46/D0;X4Y46/D0/W100;1",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_1_I3_MUX2_LUT5_O_I1": {
+          "hide_name": 0,
+          "bits": [ 9703 ] ,
+          "attributes": {
+            "ROUTING": "X5Y46/F7;;1",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:151.13-151.15"
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_1_I3_MUX2_LUT5_O_I0": {
+          "hide_name": 0,
+          "bits": [ 9702 ] ,
+          "attributes": {
+            "ROUTING": "X5Y46/F6;;1",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:151.9-151.11"
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_1_I3[3]": {
+          "hide_name": 0,
+          "bits": [ 9700 ] ,
+          "attributes": {
+            "ROUTING": "X5Y46/OF6;;1;X5Y46/S260;X5Y46/S260/OF6;1;X5Y47/D6;X5Y47/D6/S261;1",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "leds_OBUF_O_I_LUT4_F_I3[3]": {
+          "hide_name": 0,
+          "bits": [ 9698 ] ,
+          "attributes": {
+            "ROUTING": "X3Y46/OF0;;1;X3Y46/E100;X3Y46/E100/OF0;1;X3Y46/W800;X3Y46/W800/E100;1;X4Y46/W200;X4Y46/W200/E808;1;X3Y46/D6;X3Y46/D6/W201;1",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
           }
         },
         "leds[0]": {
           "hide_name": 0,
-          "bits": [ 9644 ] ,
+          "bits": [ 9696 ] ,
           "attributes": {
             "ROUTING": " ",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:3.23-3.27"
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.23-5.27"
           }
         },
         "leds_OBUF_O_I[0]": {
           "hide_name": 0,
-          "bits": [ 9643 ] ,
+          "bits": [ 9695 ] ,
           "attributes": {
-            "ROUTING": "X4Y43/F7;;1;X4Y43/W820;X4Y43/W820/F7;1;X0Y43/S270;X0Y43/S270/W824;1;X0Y45/S270;X0Y45/S270/S272;1;X0Y46/A0;X0Y46/A0/S271;1"
+            "ROUTING": "X4Y46/F0;;1;X4Y46/W800;X4Y46/W800/F0;1;X0Y46/N200;X0Y46/N200/W804;1;X0Y46/A0;X0Y46/A0/N200;1"
           }
         },
         "leds[1]": {
           "hide_name": 0,
-          "bits": [ 9641 ] ,
+          "bits": [ 9693 ] ,
           "attributes": {
             "ROUTING": " ",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:3.23-3.27"
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.23-5.27"
           }
         },
         "leds_OBUF_O_I[1]": {
           "hide_name": 0,
-          "bits": [ 9640 ] ,
+          "bits": [ 9692 ] ,
           "attributes": {
-            "ROUTING": "X3Y44/F3;;1;X3Y44/W800;X3Y44/W800/F3;1;X0Y44/S200;X0Y44/S200/E804;1;X0Y46/D1;X0Y46/D1/S202;1"
+            "ROUTING": "X2Y46/F5;;1;X2Y46/W250;X2Y46/W250/F5;1;X0Y46/X08;X0Y46/X08/W252;1;X0Y46/D1;X0Y46/D1/X08;1"
           }
         },
         "leds[2]": {
           "hide_name": 0,
-          "bits": [ 9638 ] ,
+          "bits": [ 9690 ] ,
           "attributes": {
             "ROUTING": " ",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:3.23-3.27"
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.23-5.27"
           }
         },
         "leds_OBUF_O_I[2]": {
           "hide_name": 0,
-          "bits": [ 9637 ] ,
+          "bits": [ 9689 ] ,
           "attributes": {
-            "ROUTING": "X4Y44/F3;;1;X4Y44/S800;X4Y44/S800/F3;1;X4Y48/W800;X4Y48/W800/S804;1;X0Y48/N200;X0Y48/N200/W804;1;X0Y48/A0;X0Y48/A0/N200;1"
+            "ROUTING": "X2Y46/F6;;1;X2Y46/S260;X2Y46/S260/F6;1;X2Y48/W260;X2Y48/W260/S262;1;X0Y48/X03;X0Y48/X03/W262;1;X0Y48/A0;X0Y48/A0/X03;1"
           }
         },
         "leds[3]": {
           "hide_name": 0,
-          "bits": [ 9635 ] ,
+          "bits": [ 9687 ] ,
           "attributes": {
             "ROUTING": " ",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:3.23-3.27"
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.23-5.27"
           }
         },
         "leds_OBUF_O_I[3]": {
           "hide_name": 0,
-          "bits": [ 9634 ] ,
+          "bits": [ 9686 ] ,
           "attributes": {
-            "ROUTING": "X3Y46/F3;;1;X3Y46/W800;X3Y46/W800/F3;1;X0Y46/S200;X0Y46/S200/E804;1;X0Y48/D1;X0Y48/D1/S202;1"
+            "ROUTING": "X3Y46/F6;;1;X3Y46/W830;X3Y46/W830/F6;1;X0Y46/S250;X0Y46/S250/E834;1;X0Y48/X08;X0Y48/X08/S252;1;X0Y48/D1;X0Y48/D1/X08;1"
           }
         },
         "leds[4]": {
           "hide_name": 0,
-          "bits": [ 9632 ] ,
+          "bits": [ 9684 ] ,
           "attributes": {
             "ROUTING": " ",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:3.23-3.27"
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.23-5.27"
           }
         },
         "leds_OBUF_O_I[4]": {
           "hide_name": 0,
-          "bits": [ 9631 ] ,
+          "bits": [ 9683 ] ,
           "attributes": {
-            "ROUTING": "X1Y48/F7;;1;X1Y48/S270;X1Y48/S270/F7;1;X1Y50/W270;X1Y50/W270/S272;1;X0Y50/A0;X0Y50/A0/W271;1"
+            "ROUTING": "X5Y47/F6;;1;X5Y47/W830;X5Y47/W830/F6;1;X1Y47/S250;X1Y47/S250/W834;1;X1Y49/W250;X1Y49/W250/S252;1;X0Y49/S250;X0Y49/S250/W251;1;X0Y50/A0;X0Y50/A0/S251;1"
           }
         },
         "leds[5]": {
           "hide_name": 0,
-          "bits": [ 9629 ] ,
+          "bits": [ 9681 ] ,
           "attributes": {
             "ROUTING": " ",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:3.23-3.27"
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.23-5.27"
           }
         },
         "leds_OBUF_O_I[5]": {
           "hide_name": 0,
-          "bits": [ 9628 ] ,
+          "bits": [ 9680 ] ,
           "attributes": {
-            "ROUTING": "X3Y49/F4;;1;X3Y49/W820;X3Y49/W820/F4;1;X0Y49/S270;X0Y49/S270/E824;1;X0Y50/X06;X0Y50/X06/S271;1;X0Y50/D1;X0Y50/D1/X06;1"
-          }
-        },
-        "counter_DFF_Q_D_ALU_SUM_COUT": {
-          "hide_name": 0,
-          "bits": [ 9624 ] ,
-          "attributes": {
-            "ROUTING": " ",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
-            "abc9_carry": "00000000000000000000000000000001"
-          }
-        },
-        "counter[14]": {
-          "hide_name": 0,
-          "bits": [ 9621 ] ,
-          "attributes": {
-            "ROUTING": "X3Y43/Q3;;1;X3Y43/B3;X3Y43/B3/Q3;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.16-5.23"
-          }
-        },
-        "counter_DFF_Q_9_D": {
-          "hide_name": 0,
-          "bits": [ 9620 ] ,
-          "attributes": {
-            "ROUTING": "X3Y43/F3;;1;X3Y43/XD3;X3Y43/XD3/F3;1"
-          }
-        },
-        "counter_DFF_Q_9_D_ALU_SUM_COUT": {
-          "hide_name": 0,
-          "bits": [ 9618 ] ,
-          "attributes": {
-            "ROUTING": "X3Y43/COUT3;;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
-            "abc9_carry": "00000000000000000000000000000001"
-          }
-        },
-        "counter[15]": {
-          "hide_name": 0,
-          "bits": [ 9616 ] ,
-          "attributes": {
-            "ROUTING": "X3Y43/Q4;;1;X3Y43/X03;X3Y43/X03/Q4;1;X3Y43/B4;X3Y43/B4/X03;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.16-5.23"
-          }
-        },
-        "counter_DFF_Q_8_D": {
-          "hide_name": 0,
-          "bits": [ 9615 ] ,
-          "attributes": {
-            "ROUTING": "X3Y43/F4;;1;X3Y43/XD4;X3Y43/XD4/F4;1"
-          }
-        },
-        "counter_DFF_Q_8_D_ALU_SUM_COUT": {
-          "hide_name": 0,
-          "bits": [ 9613 ] ,
-          "attributes": {
-            "ROUTING": "X3Y43/COUT4;;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
-            "abc9_carry": "00000000000000000000000000000001"
-          }
-        },
-        "counter[16]": {
-          "hide_name": 0,
-          "bits": [ 9611 ] ,
-          "attributes": {
-            "ROUTING": "X3Y43/Q5;;1;X3Y43/X08;X3Y43/X08/Q5;1;X3Y43/B5;X3Y43/B5/X08;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.16-5.23"
-          }
-        },
-        "counter_DFF_Q_7_D": {
-          "hide_name": 0,
-          "bits": [ 9610 ] ,
-          "attributes": {
-            "ROUTING": "X3Y43/F5;;1;X3Y43/XD5;X3Y43/XD5/F5;1"
-          }
-        },
-        "counter_DFF_Q_7_D_ALU_SUM_COUT": {
-          "hide_name": 0,
-          "bits": [ 9608 ] ,
-          "attributes": {
-            "ROUTING": "X4Y43/CIN0;;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
-            "abc9_carry": "00000000000000000000000000000001"
-          }
-        },
-        "counter[17]": {
-          "hide_name": 0,
-          "bits": [ 9606 ] ,
-          "attributes": {
-            "ROUTING": "X4Y44/Q0;;1;X4Y44/N130;X4Y44/N130/Q0;1;X4Y43/B0;X4Y43/B0/N131;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.16-5.23"
-          }
-        },
-        "counter_DFF_Q_6_D": {
-          "hide_name": 0,
-          "bits": [ 9605 ] ,
-          "attributes": {
-            "ROUTING": "X4Y43/F0;;1;X4Y43/SN20;X4Y43/SN20/F0;1;X4Y44/D0;X4Y44/D0/S121;1"
-          }
-        },
-        "counter_DFF_Q_6_D_ALU_SUM_COUT": {
-          "hide_name": 0,
-          "bits": [ 9603 ] ,
-          "attributes": {
-            "ROUTING": "X4Y43/COUT0;;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
-            "abc9_carry": "00000000000000000000000000000001"
-          }
-        },
-        "counter[18]": {
-          "hide_name": 0,
-          "bits": [ 9601 ] ,
-          "attributes": {
-            "ROUTING": "X4Y43/X06;X4Y43/X06/Q1;1;X4Y43/A7;X4Y43/A7/X06;1;X4Y43/Q1;;1;X4Y43/B1;X4Y43/B1/Q1;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.16-5.23"
-          }
-        },
-        "counter_DFF_Q_5_D": {
-          "hide_name": 0,
-          "bits": [ 9600 ] ,
-          "attributes": {
-            "ROUTING": "X4Y43/F1;;1;X4Y43/XD1;X4Y43/XD1/F1;1"
-          }
-        },
-        "counter_DFF_Q_5_D_ALU_SUM_COUT": {
-          "hide_name": 0,
-          "bits": [ 9598 ] ,
-          "attributes": {
-            "ROUTING": "X4Y43/COUT1;;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
-            "abc9_carry": "00000000000000000000000000000001"
-          }
-        },
-        "counter[19]": {
-          "hide_name": 0,
-          "bits": [ 9596 ] ,
-          "attributes": {
-            "ROUTING": "X4Y43/S130;X4Y43/S130/Q2;1;X4Y44/W270;X4Y44/W270/S131;1;X3Y44/A3;X3Y44/A3/W271;1;X4Y43/Q2;;1;X4Y43/X01;X4Y43/X01/Q2;1;X4Y43/B2;X4Y43/B2/X01;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.16-5.23"
-          }
-        },
-        "counter_DFF_Q_4_D": {
-          "hide_name": 0,
-          "bits": [ 9595 ] ,
-          "attributes": {
-            "ROUTING": "X4Y43/F2;;1;X4Y43/XD2;X4Y43/XD2/F2;1"
-          }
-        },
-        "counter_DFF_Q_4_D_ALU_SUM_COUT": {
-          "hide_name": 0,
-          "bits": [ 9593 ] ,
-          "attributes": {
-            "ROUTING": "X4Y43/COUT2;;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
-            "abc9_carry": "00000000000000000000000000000001"
-          }
-        },
-        "counter[20]": {
-          "hide_name": 0,
-          "bits": [ 9591 ] ,
-          "attributes": {
-            "ROUTING": "X4Y44/A3;X4Y44/A3/N210;1;X4Y44/Q1;;1;X4Y44/N210;X4Y44/N210/Q1;1;X4Y43/B3;X4Y43/B3/N211;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.16-5.23"
-          }
-        },
-        "counter_DFF_Q_3_D": {
-          "hide_name": 0,
-          "bits": [ 9590 ] ,
-          "attributes": {
-            "ROUTING": "X4Y43/F3;;1;X4Y43/S230;X4Y43/S230/F3;1;X4Y44/X08;X4Y44/X08/S231;1;X4Y44/D1;X4Y44/D1/X08;1"
-          }
-        },
-        "counter_DFF_Q_3_D_ALU_SUM_COUT": {
-          "hide_name": 0,
-          "bits": [ 9588 ] ,
-          "attributes": {
-            "ROUTING": "X4Y43/COUT3;;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
-            "abc9_carry": "00000000000000000000000000000001"
-          }
-        },
-        "counter_DFF_Q_23_D": {
-          "hide_name": 0,
-          "bits": [ 9585 ] ,
-          "attributes": {
-            "ROUTING": "X1Y42/F0;;1;X1Y42/XD0;X1Y42/XD0/F0;1"
-          }
-        },
-        "counter_DFF_Q_22_D_ALU_SUM_CIN_ALU_COUT_SUM": {
-          "hide_name": 0,
-          "bits": [ 9583 ] ,
-          "attributes": {
-            "ROUTING": " "
-          }
-        },
-        "counter[0]": {
-          "hide_name": 0,
-          "bits": [ 9582 ] ,
-          "attributes": {
-            "ROUTING": "X1Y42/X01;X1Y42/X01/Q0;1;X1Y42/A0;X1Y42/A0/X01;1;X1Y42/Q0;;1;X1Y42/SN10;X1Y42/SN10/Q0;1;X1Y43/B1;X1Y43/B1/S111;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.16-5.23"
-          }
-        },
-        "counter_DFF_Q_22_D_ALU_SUM_CIN": {
-          "hide_name": 0,
-          "bits": [ 9580 ] ,
-          "attributes": {
-            "ROUTING": "X1Y43/COUT1;;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
-            "abc9_carry": "00000000000000000000000000000001"
-          }
-        },
-        "counter[1]": {
-          "hide_name": 0,
-          "bits": [ 9578 ] ,
-          "attributes": {
-            "ROUTING": "X1Y43/Q2;;1;X1Y43/S130;X1Y43/S130/Q2;1;X1Y43/B2;X1Y43/B2/S130;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.16-5.23"
-          }
-        },
-        "counter_DFF_Q_22_D": {
-          "hide_name": 0,
-          "bits": [ 9577 ] ,
-          "attributes": {
-            "ROUTING": "X1Y43/F2;;1;X1Y43/XD2;X1Y43/XD2/F2;1"
-          }
-        },
-        "counter_DFF_Q_22_D_ALU_SUM_COUT": {
-          "hide_name": 0,
-          "bits": [ 9575 ] ,
-          "attributes": {
-            "ROUTING": "X1Y43/COUT2;;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
-            "abc9_carry": "00000000000000000000000000000001"
-          }
-        },
-        "counter[2]": {
-          "hide_name": 0,
-          "bits": [ 9573 ] ,
-          "attributes": {
-            "ROUTING": "X1Y43/Q3;;1;X1Y43/B3;X1Y43/B3/Q3;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.16-5.23"
-          }
-        },
-        "counter_DFF_Q_21_D": {
-          "hide_name": 0,
-          "bits": [ 9572 ] ,
-          "attributes": {
-            "ROUTING": "X1Y43/F3;;1;X1Y43/XD3;X1Y43/XD3/F3;1"
-          }
-        },
-        "counter_DFF_Q_21_D_ALU_SUM_COUT": {
-          "hide_name": 0,
-          "bits": [ 9570 ] ,
-          "attributes": {
-            "ROUTING": "X1Y43/COUT3;;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
-            "abc9_carry": "00000000000000000000000000000001"
-          }
-        },
-        "counter[3]": {
-          "hide_name": 0,
-          "bits": [ 9568 ] ,
-          "attributes": {
-            "ROUTING": "X1Y43/Q4;;1;X1Y43/X03;X1Y43/X03/Q4;1;X1Y43/B4;X1Y43/B4/X03;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.16-5.23"
-          }
-        },
-        "counter_DFF_Q_20_D": {
-          "hide_name": 0,
-          "bits": [ 9567 ] ,
-          "attributes": {
-            "ROUTING": "X1Y43/F4;;1;X1Y43/XD4;X1Y43/XD4/F4;1"
-          }
-        },
-        "counter[21]": {
-          "hide_name": 0,
-          "bits": [ 9565 ] ,
-          "attributes": {
-            "ROUTING": "X4Y43/SN10;X4Y43/SN10/Q4;1;X4Y44/S250;X4Y44/S250/S111;1;X4Y46/W250;X4Y46/W250/S252;1;X3Y46/A3;X3Y46/A3/W251;1;X4Y43/Q4;;1;X4Y43/X03;X4Y43/X03/Q4;1;X4Y43/B4;X4Y43/B4/X03;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.16-5.23"
-          }
-        },
-        "counter_DFF_Q_2_D": {
-          "hide_name": 0,
-          "bits": [ 9564 ] ,
-          "attributes": {
-            "ROUTING": "X4Y43/F4;;1;X4Y43/XD4;X4Y43/XD4/F4;1"
-          }
-        },
-        "counter_DFF_Q_1_D_ALU_SUM_COUT": {
-          "hide_name": 0,
-          "bits": [ 9562 ] ,
-          "attributes": {
-            "ROUTING": "X5Y43/CIN0;;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
-            "abc9_carry": "00000000000000000000000000000001"
-          }
-        },
-        "counter_DFF_Q_2_D_ALU_SUM_COUT": {
-          "hide_name": 0,
-          "bits": [ 9561 ] ,
-          "attributes": {
-            "ROUTING": "X4Y43/COUT4;;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
-            "abc9_carry": "00000000000000000000000000000001"
-          }
-        },
-        "counter_DFF_Q_20_D_ALU_SUM_COUT": {
-          "hide_name": 0,
-          "bits": [ 9559 ] ,
-          "attributes": {
-            "ROUTING": "X1Y43/COUT4;;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
-            "abc9_carry": "00000000000000000000000000000001"
-          }
-        },
-        "counter[4]": {
-          "hide_name": 0,
-          "bits": [ 9557 ] ,
-          "attributes": {
-            "ROUTING": "X1Y43/Q5;;1;X1Y43/W100;X1Y43/W100/Q5;1;X1Y43/B5;X1Y43/B5/W100;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.16-5.23"
-          }
-        },
-        "counter_DFF_Q_19_D": {
-          "hide_name": 0,
-          "bits": [ 9556 ] ,
-          "attributes": {
-            "ROUTING": "X1Y43/F5;;1;X1Y43/XD5;X1Y43/XD5/F5;1"
-          }
-        },
-        "counter_DFF_Q_19_D_ALU_SUM_COUT": {
-          "hide_name": 0,
-          "bits": [ 9554 ] ,
-          "attributes": {
-            "ROUTING": "X2Y43/CIN0;;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
-            "abc9_carry": "00000000000000000000000000000001"
-          }
-        },
-        "counter[5]": {
-          "hide_name": 0,
-          "bits": [ 9552 ] ,
-          "attributes": {
-            "ROUTING": "X2Y43/Q0;;1;X2Y43/X05;X2Y43/X05/Q0;1;X2Y43/B0;X2Y43/B0/X05;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.16-5.23"
-          }
-        },
-        "counter_DFF_Q_18_D": {
-          "hide_name": 0,
-          "bits": [ 9551 ] ,
-          "attributes": {
-            "ROUTING": "X2Y43/F0;;1;X2Y43/XD0;X2Y43/XD0/F0;1"
-          }
-        },
-        "counter_DFF_Q_18_D_ALU_SUM_COUT": {
-          "hide_name": 0,
-          "bits": [ 9549 ] ,
-          "attributes": {
-            "ROUTING": "X2Y43/COUT0;;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
-            "abc9_carry": "00000000000000000000000000000001"
-          }
-        },
-        "counter[6]": {
-          "hide_name": 0,
-          "bits": [ 9547 ] ,
-          "attributes": {
-            "ROUTING": "X2Y43/Q1;;1;X2Y43/B1;X2Y43/B1/Q1;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.16-5.23"
-          }
-        },
-        "counter_DFF_Q_17_D": {
-          "hide_name": 0,
-          "bits": [ 9546 ] ,
-          "attributes": {
-            "ROUTING": "X2Y43/F1;;1;X2Y43/XD1;X2Y43/XD1/F1;1"
-          }
-        },
-        "counter_DFF_Q_17_D_ALU_SUM_COUT": {
-          "hide_name": 0,
-          "bits": [ 9544 ] ,
-          "attributes": {
-            "ROUTING": "X2Y43/COUT1;;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
-            "abc9_carry": "00000000000000000000000000000001"
+            "ROUTING": "X6Y47/F1;;1;X6Y47/W810;X6Y47/W810/F1;1;X1Y47/W130;X1Y47/W130/E818;1;X0Y47/S270;X0Y47/S270/W131;1;X0Y49/S220;X0Y49/S220/S272;1;X0Y50/D1;X0Y50/D1/S221;1"
           }
         },
         "counter[7]": {
           "hide_name": 0,
-          "bits": [ 9542 ] ,
+          "bits": [ 9676 ] ,
           "attributes": {
-            "ROUTING": "X2Y43/Q2;;1;X2Y43/S130;X2Y43/S130/Q2;1;X2Y43/B2;X2Y43/B2/S130;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.16-5.23"
+            "ROUTING": "X2Y47/Q2;;1;X2Y47/X01;X2Y47/X01/Q2;1;X2Y47/B2;X2Y47/B2/X01;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.16-8.23"
           }
         },
-        "counter_DFF_Q_16_D": {
+        "counter_DFF_Q_9_D": {
           "hide_name": 0,
-          "bits": [ 9541 ] ,
+          "bits": [ 9675 ] ,
           "attributes": {
-            "ROUTING": "X2Y43/F2;;1;X2Y43/XD2;X2Y43/XD2/F2;1"
-          }
-        },
-        "counter_DFF_Q_16_D_ALU_SUM_COUT": {
-          "hide_name": 0,
-          "bits": [ 9539 ] ,
-          "attributes": {
-            "ROUTING": "X2Y43/COUT2;;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
-            "abc9_carry": "00000000000000000000000000000001"
-          }
-        },
-        "counter[8]": {
-          "hide_name": 0,
-          "bits": [ 9537 ] ,
-          "attributes": {
-            "ROUTING": "X2Y43/Q3;;1;X2Y43/B3;X2Y43/B3/Q3;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.16-5.23"
-          }
-        },
-        "counter_DFF_Q_15_D": {
-          "hide_name": 0,
-          "bits": [ 9536 ] ,
-          "attributes": {
-            "ROUTING": "X2Y43/F3;;1;X2Y43/XD3;X2Y43/XD3/F3;1"
-          }
-        },
-        "counter_DFF_Q_15_D_ALU_SUM_COUT": {
-          "hide_name": 0,
-          "bits": [ 9534 ] ,
-          "attributes": {
-            "ROUTING": "X2Y43/COUT3;;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
-            "abc9_carry": "00000000000000000000000000000001"
+            "ROUTING": "X2Y47/F2;;1;X2Y47/XD2;X2Y47/XD2/F2;1"
           }
         },
         "counter[9]": {
           "hide_name": 0,
-          "bits": [ 9532 ] ,
+          "bits": [ 9672 ] ,
           "attributes": {
-            "ROUTING": "X2Y43/Q4;;1;X2Y43/X03;X2Y43/X03/Q4;1;X2Y43/B4;X2Y43/B4/X03;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.16-5.23"
+            "ROUTING": "X2Y47/Q4;;1;X2Y47/X03;X2Y47/X03/Q4;1;X2Y47/B4;X2Y47/B4/X03;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.16-8.23"
           }
         },
-        "counter_DFF_Q_14_D": {
+        "counter_DFF_Q_8_D": {
           "hide_name": 0,
-          "bits": [ 9531 ] ,
+          "bits": [ 9671 ] ,
           "attributes": {
-            "ROUTING": "X2Y43/F4;;1;X2Y43/XD4;X2Y43/XD4/F4;1"
+            "ROUTING": "X2Y47/F4;;1;X2Y47/XD4;X2Y47/XD4/F4;1"
           }
         },
-        "counter_DFF_Q_14_D_ALU_SUM_COUT": {
+        "counter[4]": {
           "hide_name": 0,
-          "bits": [ 9529 ] ,
+          "bits": [ 9668 ] ,
           "attributes": {
-            "ROUTING": "X2Y43/COUT4;;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "ROUTING": "X1Y47/Q5;;1;X1Y47/E250;X1Y47/E250/Q5;1;X1Y47/B5;X1Y47/B5/E250;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.16-8.23"
+          }
+        },
+        "counter_DFF_Q_7_D": {
+          "hide_name": 0,
+          "bits": [ 9667 ] ,
+          "attributes": {
+            "ROUTING": "X1Y47/F5;;1;X1Y47/XD5;X1Y47/XD5/F5;1"
+          }
+        },
+        "counter_DFF_Q_8_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9665 ] ,
+          "attributes": {
+            "ROUTING": "X2Y47/COUT4;;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
             "abc9_carry": "00000000000000000000000000000001"
           }
         },
         "counter[10]": {
           "hide_name": 0,
-          "bits": [ 9527 ] ,
+          "bits": [ 9663 ] ,
           "attributes": {
-            "ROUTING": "X2Y43/Q5;;1;X2Y43/E250;X2Y43/E250/Q5;1;X2Y43/B5;X2Y43/B5/E250;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.16-5.23"
+            "ROUTING": "X2Y47/Q5;;1;X2Y47/X08;X2Y47/X08/Q5;1;X2Y47/B5;X2Y47/B5/X08;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.16-8.23"
           }
         },
-        "counter_DFF_Q_13_D": {
+        "counter_DFF_Q_6_D": {
           "hide_name": 0,
-          "bits": [ 9526 ] ,
+          "bits": [ 9662 ] ,
           "attributes": {
-            "ROUTING": "X2Y43/F5;;1;X2Y43/XD5;X2Y43/XD5/F5;1"
+            "ROUTING": "X2Y47/F5;;1;X2Y47/XD5;X2Y47/XD5/F5;1"
           }
         },
-        "counter_DFF_Q_13_D_ALU_SUM_COUT": {
+        "counter_DFF_Q_5_D_ALU_SUM_COUT": {
           "hide_name": 0,
-          "bits": [ 9524 ] ,
+          "bits": [ 9660 ] ,
           "attributes": {
-            "ROUTING": "X3Y43/CIN0;;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "ROUTING": "X1Y47/COUT4;;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "counter_DFF_Q_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9659 ] ,
+          "attributes": {
+            "ROUTING": "X1Y47/COUT3;;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "counter[3]": {
+          "hide_name": 0,
+          "bits": [ 9657 ] ,
+          "attributes": {
+            "ROUTING": "X1Y47/Q4;;1;X1Y47/X03;X1Y47/X03/Q4;1;X1Y47/B4;X1Y47/B4/X03;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.16-8.23"
+          }
+        },
+        "counter_DFF_Q_5_D": {
+          "hide_name": 0,
+          "bits": [ 9656 ] ,
+          "attributes": {
+            "ROUTING": "X1Y47/F4;;1;X1Y47/XD4;X1Y47/XD4/F4;1"
+          }
+        },
+        "counter_DFF_Q_4_D_ALU_SUM_CIN_ALU_COUT_SUM": {
+          "hide_name": 0,
+          "bits": [ 9654 ] ,
+          "attributes": {
+            "ROUTING": " "
+          }
+        },
+        "counter_DFF_Q_4_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9652 ] ,
+          "attributes": {
+            "ROUTING": "X1Y47/COUT2;;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "counter_DFF_Q_4_D_ALU_SUM_CIN": {
+          "hide_name": 0,
+          "bits": [ 9651 ] ,
+          "attributes": {
+            "ROUTING": "X1Y47/COUT1;;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "counter[1]": {
+          "hide_name": 0,
+          "bits": [ 9649 ] ,
+          "attributes": {
+            "ROUTING": "X1Y47/Q2;;1;X1Y47/X01;X1Y47/X01/Q2;1;X1Y47/B2;X1Y47/B2/X01;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.16-8.23"
+          }
+        },
+        "counter_DFF_Q_4_D": {
+          "hide_name": 0,
+          "bits": [ 9648 ] ,
+          "attributes": {
+            "ROUTING": "X1Y47/F2;;1;X1Y47/XD2;X1Y47/XD2/F2;1"
+          }
+        },
+        "counter_DFF_Q_7_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9644 ] ,
+          "attributes": {
+            "ROUTING": "X2Y47/CIN0;;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "counter[5]": {
+          "hide_name": 0,
+          "bits": [ 9642 ] ,
+          "attributes": {
+            "ROUTING": "X2Y47/Q0;;1;X2Y47/S100;X2Y47/S100/Q0;1;X2Y47/B0;X2Y47/B0/S100;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.16-8.23"
+          }
+        },
+        "counter_DFF_Q_3_D": {
+          "hide_name": 0,
+          "bits": [ 9641 ] ,
+          "attributes": {
+            "ROUTING": "X2Y47/F0;;1;X2Y47/XD0;X2Y47/XD0/F0;1"
+          }
+        },
+        "counter_DFF_Q_2_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9639 ] ,
+          "attributes": {
+            "ROUTING": "X2Y47/COUT1;;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "counter_DFF_Q_3_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9638 ] ,
+          "attributes": {
+            "ROUTING": "X2Y47/COUT0;;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "counter_DFF_Q_6_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9636 ] ,
+          "attributes": {
+            "ROUTING": "X3Y47/CIN0;;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
             "abc9_carry": "00000000000000000000000000000001"
           }
         },
         "counter[11]": {
           "hide_name": 0,
-          "bits": [ 9522 ] ,
+          "bits": [ 9634 ] ,
           "attributes": {
-            "ROUTING": "X3Y43/Q0;;1;X3Y43/S100;X3Y43/S100/Q0;1;X3Y43/B0;X3Y43/B0/S100;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.16-5.23"
+            "ROUTING": "X3Y47/Q0;;1;X3Y47/S100;X3Y47/S100/Q0;1;X3Y47/B0;X3Y47/B0/S100;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.16-8.23"
           }
         },
-        "counter_DFF_Q_12_D": {
+        "counter_DFF_Q_28_D": {
           "hide_name": 0,
-          "bits": [ 9521 ] ,
+          "bits": [ 9633 ] ,
           "attributes": {
-            "ROUTING": "X3Y43/F0;;1;X3Y43/XD0;X3Y43/XD0/F0;1"
+            "ROUTING": "X3Y47/F0;;1;X3Y47/XD0;X3Y47/XD0/F0;1"
           }
         },
-        "counter_DFF_Q_12_D_ALU_SUM_COUT": {
+        "counter_DFF_Q_28_D_ALU_SUM_COUT": {
           "hide_name": 0,
-          "bits": [ 9519 ] ,
+          "bits": [ 9631 ] ,
           "attributes": {
-            "ROUTING": "X3Y43/COUT0;;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "ROUTING": "X3Y47/COUT0;;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
             "abc9_carry": "00000000000000000000000000000001"
           }
         },
         "counter[12]": {
           "hide_name": 0,
-          "bits": [ 9517 ] ,
+          "bits": [ 9629 ] ,
           "attributes": {
-            "ROUTING": "X3Y43/Q1;;1;X3Y43/B1;X3Y43/B1/Q1;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.16-5.23"
+            "ROUTING": "X3Y47/Q1;;1;X3Y47/B1;X3Y47/B1/Q1;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.16-8.23"
           }
         },
-        "counter_DFF_Q_11_D": {
+        "counter_DFF_Q_27_D": {
           "hide_name": 0,
-          "bits": [ 9516 ] ,
+          "bits": [ 9628 ] ,
           "attributes": {
-            "ROUTING": "X3Y43/F1;;1;X3Y43/XD1;X3Y43/XD1/F1;1"
+            "ROUTING": "X3Y47/F1;;1;X3Y47/XD1;X3Y47/XD1/F1;1"
+          }
+        },
+        "counter_DFF_Q_27_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9626 ] ,
+          "attributes": {
+            "ROUTING": "X3Y47/COUT1;;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "counter[13]": {
+          "hide_name": 0,
+          "bits": [ 9624 ] ,
+          "attributes": {
+            "ROUTING": "X3Y47/Q2;;1;X3Y47/X01;X3Y47/X01/Q2;1;X3Y47/B2;X3Y47/B2/X01;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.16-8.23"
+          }
+        },
+        "counter_DFF_Q_26_D": {
+          "hide_name": 0,
+          "bits": [ 9623 ] ,
+          "attributes": {
+            "ROUTING": "X3Y47/F2;;1;X3Y47/XD2;X3Y47/XD2/F2;1"
+          }
+        },
+        "counter_DFF_Q_26_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9621 ] ,
+          "attributes": {
+            "ROUTING": "X3Y47/COUT2;;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "counter[14]": {
+          "hide_name": 0,
+          "bits": [ 9619 ] ,
+          "attributes": {
+            "ROUTING": "X3Y47/Q3;;1;X3Y47/B3;X3Y47/B3/Q3;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.16-8.23"
+          }
+        },
+        "counter_DFF_Q_25_D": {
+          "hide_name": 0,
+          "bits": [ 9618 ] ,
+          "attributes": {
+            "ROUTING": "X3Y47/F3;;1;X3Y47/XD3;X3Y47/XD3/F3;1"
+          }
+        },
+        "counter_DFF_Q_25_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9616 ] ,
+          "attributes": {
+            "ROUTING": "X3Y47/COUT3;;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "counter[15]": {
+          "hide_name": 0,
+          "bits": [ 9614 ] ,
+          "attributes": {
+            "ROUTING": "X3Y47/Q4;;1;X3Y47/W100;X3Y47/W100/Q4;1;X3Y47/B4;X3Y47/B4/W100;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.16-8.23"
+          }
+        },
+        "counter_DFF_Q_24_D": {
+          "hide_name": 0,
+          "bits": [ 9613 ] ,
+          "attributes": {
+            "ROUTING": "X3Y47/F4;;1;X3Y47/XD4;X3Y47/XD4/F4;1"
+          }
+        },
+        "counter_DFF_Q_24_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9611 ] ,
+          "attributes": {
+            "ROUTING": "X3Y47/COUT4;;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "counter[16]": {
+          "hide_name": 0,
+          "bits": [ 9609 ] ,
+          "attributes": {
+            "ROUTING": "X3Y48/Q1;;1;X3Y48/N100;X3Y48/N100/Q1;1;X3Y47/B5;X3Y47/B5/N101;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.16-8.23"
+          }
+        },
+        "counter_DFF_Q_23_D": {
+          "hide_name": 0,
+          "bits": [ 9608 ] ,
+          "attributes": {
+            "ROUTING": "X3Y47/F5;;1;X3Y47/SN20;X3Y47/SN20/F5;1;X3Y48/D1;X3Y48/D1/S121;1"
+          }
+        },
+        "counter_DFF_Q_23_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9606 ] ,
+          "attributes": {
+            "ROUTING": "X4Y47/CIN0;;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "counter[17]": {
+          "hide_name": 0,
+          "bits": [ 9604 ] ,
+          "attributes": {
+            "ROUTING": "X4Y47/Q0;;1;X4Y47/X05;X4Y47/X05/Q0;1;X4Y47/B0;X4Y47/B0/X05;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.16-8.23"
+          }
+        },
+        "counter_DFF_Q_22_D": {
+          "hide_name": 0,
+          "bits": [ 9603 ] ,
+          "attributes": {
+            "ROUTING": "X4Y47/F0;;1;X4Y47/XD0;X4Y47/XD0/F0;1"
+          }
+        },
+        "counter_DFF_Q_22_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9601 ] ,
+          "attributes": {
+            "ROUTING": "X4Y47/COUT0;;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "counter[18]": {
+          "hide_name": 0,
+          "bits": [ 9599 ] ,
+          "attributes": {
+            "ROUTING": "X4Y47/Q1;;1;X4Y47/B1;X4Y47/B1/Q1;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.16-8.23"
+          }
+        },
+        "counter_DFF_Q_21_D": {
+          "hide_name": 0,
+          "bits": [ 9598 ] ,
+          "attributes": {
+            "ROUTING": "X4Y47/F1;;1;X4Y47/XD1;X4Y47/XD1/F1;1"
+          }
+        },
+        "counter_DFF_Q_21_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9596 ] ,
+          "attributes": {
+            "ROUTING": "X4Y47/COUT1;;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "counter[19]": {
+          "hide_name": 0,
+          "bits": [ 9594 ] ,
+          "attributes": {
+            "ROUTING": "X4Y47/Q2;;1;X4Y47/S130;X4Y47/S130/Q2;1;X4Y47/B2;X4Y47/B2/S130;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.16-8.23"
+          }
+        },
+        "counter_DFF_Q_20_D": {
+          "hide_name": 0,
+          "bits": [ 9593 ] ,
+          "attributes": {
+            "ROUTING": "X4Y47/F2;;1;X4Y47/XD2;X4Y47/XD2/F2;1"
+          }
+        },
+        "counter[6]": {
+          "hide_name": 0,
+          "bits": [ 9591 ] ,
+          "attributes": {
+            "ROUTING": "X2Y48/Q3;;1;X2Y48/N130;X2Y48/N130/Q3;1;X2Y47/B1;X2Y47/B1/N131;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.16-8.23"
+          }
+        },
+        "counter_DFF_Q_2_D": {
+          "hide_name": 0,
+          "bits": [ 9590 ] ,
+          "attributes": {
+            "ROUTING": "X2Y47/F1;;1;X2Y47/SN20;X2Y47/SN20/F1;1;X2Y48/D3;X2Y48/D3/S121;1"
+          }
+        },
+        "counter_DFF_Q_1_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9588 ] ,
+          "attributes": {
+            "ROUTING": "X2Y47/COUT3;;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "counter_DFF_Q_9_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9587 ] ,
+          "attributes": {
+            "ROUTING": "X2Y47/COUT2;;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "counter_DFF_Q_20_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9585 ] ,
+          "attributes": {
+            "ROUTING": "X4Y47/COUT2;;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "btn2_IBUF_I_O[4]": {
+          "hide_name": 0,
+          "bits": [ 9583 ] ,
+          "attributes": {
+            "ROUTING": "X4Y47/N230;X4Y47/N230/Q3;1;X4Y46/X08;X4Y46/X08/N231;1;X4Y46/SEL4;X4Y46/SEL4/X08;1;X4Y47/Q3;;1;X4Y47/B3;X4Y47/B3/Q3;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.16-8.23",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "counter_DFF_Q_19_D": {
+          "hide_name": 0,
+          "bits": [ 9581 ] ,
+          "attributes": {
+            "ROUTING": "X4Y47/F3;;1;X4Y47/XD3;X4Y47/XD3/F3;1"
+          }
+        },
+        "counter_DFF_Q_19_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9579 ] ,
+          "attributes": {
+            "ROUTING": "X4Y47/COUT3;;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "btn2_IBUF_I_O[3]": {
+          "hide_name": 0,
+          "bits": [ 9577 ] ,
+          "attributes": {
+            "ROUTING": "X4Y46/D5;X4Y46/D5/N241;1;X4Y46/X05;X4Y46/X05/N241;1;X4Y46/SEL2;X4Y46/SEL2/X05;1;X4Y46/D4;X4Y46/D4/N241;1;X4Y47/Q4;;1;X4Y47/N240;X4Y47/N240/Q4;1;X4Y47/B4;X4Y47/B4/N240;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.16-8.23",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "counter_DFF_Q_18_D": {
+          "hide_name": 0,
+          "bits": [ 9575 ] ,
+          "attributes": {
+            "ROUTING": "X4Y47/F4;;1;X4Y47/XD4;X4Y47/XD4/F4;1"
+          }
+        },
+        "counter_DFF_Q_18_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9573 ] ,
+          "attributes": {
+            "ROUTING": "X4Y47/COUT4;;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "btn2_IBUF_I_O[2]": {
+          "hide_name": 0,
+          "bits": [ 9571 ] ,
+          "attributes": {
+            "ROUTING": "X4Y46/C4;X4Y46/C4/N100;1;X4Y46/D3;X4Y46/D3/W130;1;X4Y46/N100;X4Y46/N100/Q1;1;X4Y46/C5;X4Y46/C5/N100;1;X3Y46/W270;X3Y46/W270/W131;1;X2Y46/X08;X2Y46/X08/W271;1;X2Y46/SEL0;X2Y46/SEL0/X08;1;X4Y46/W130;X4Y46/W130/Q1;1;X4Y46/D2;X4Y46/D2/W130;1;X4Y46/Q1;;1;X4Y46/SN20;X4Y46/SN20/Q1;1;X4Y47/B5;X4Y47/B5/S121;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.16-8.23",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "counter_DFF_Q_17_D": {
+          "hide_name": 0,
+          "bits": [ 9569 ] ,
+          "attributes": {
+            "ROUTING": "X4Y47/F5;;1;X4Y47/N100;X4Y47/N100/F5;1;X4Y46/D1;X4Y46/D1/N101;1"
+          }
+        },
+        "counter_DFF_Q_17_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9567 ] ,
+          "attributes": {
+            "ROUTING": "X5Y47/CIN0;;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "counter[23]": {
+          "hide_name": 0,
+          "bits": [ 9565 ] ,
+          "attributes": {
+            "ROUTING": "X2Y46/D1;X2Y46/D1/X03;1;X3Y46/X07;X3Y46/X07/W241;1;X3Y46/SEL0;X3Y46/SEL0/X07;1;X4Y46/C2;X4Y46/C2/W101;1;X4Y46/W240;X4Y46/W240/W101;1;X2Y46/X03;X2Y46/X03/W242;1;X2Y46/D0;X2Y46/D0/X03;1;X4Y46/C0;X4Y46/C0/W101;1;X5Y46/W100;X5Y46/W100/Q2;1;X4Y46/C3;X4Y46/C3/W101;1;X5Y46/Q2;;1;X5Y46/SN10;X5Y46/SN10/Q2;1;X5Y47/B0;X5Y47/B0/S111;1",
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21"
+          }
+        },
+        "counter_DFF_Q_16_D": {
+          "hide_name": 0,
+          "bits": [ 9563 ] ,
+          "attributes": {
+            "ROUTING": "X5Y47/F0;;1;X5Y47/N200;X5Y47/N200/F0;1;X5Y46/D2;X5Y46/D2/N201;1"
+          }
+        },
+        "counter_DFF_Q_16_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9561 ] ,
+          "attributes": {
+            "ROUTING": "X5Y47/COUT0;;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "counter[24]": {
+          "hide_name": 0,
+          "bits": [ 9559 ] ,
+          "attributes": {
+            "ROUTING": "X3Y46/D1;X3Y46/D1/E101;1;X2Y46/C1;X2Y46/C1/E100;1;X4Y46/E260;X4Y46/E260/E232;1;X5Y46/SEL6;X5Y46/SEL6/E261;1;X2Y46/C0;X2Y46/C0/E100;1;X2Y46/E100;X2Y46/E100/E808;1;X3Y46/D0;X3Y46/D0/E101;1;X5Y46/W800;X5Y46/W800/Q0;1;X2Y46/E230;X2Y46/E230/E808;1;X2Y46/C5;X2Y46/C5/E230;1;X5Y46/Q0;;1;X5Y46/S200;X5Y46/S200/Q0;1;X5Y47/X07;X5Y47/X07/S201;1;X5Y47/B1;X5Y47/B1/X07;1",
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21"
+          }
+        },
+        "counter_DFF_Q_15_D": {
+          "hide_name": 0,
+          "bits": [ 9557 ] ,
+          "attributes": {
+            "ROUTING": "X5Y47/F1;;1;X5Y47/N100;X5Y47/N100/F1;1;X5Y46/D0;X5Y46/D0/N101;1"
+          }
+        },
+        "counter_DFF_Q_15_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9555 ] ,
+          "attributes": {
+            "ROUTING": "X5Y47/COUT1;;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "counter[25]": {
+          "hide_name": 0,
+          "bits": [ 9553 ] ,
+          "attributes": {
+            "ROUTING": "X3Y46/W260;X3Y46/W260/W232;1;X2Y46/C6;X2Y46/C6/W261;1;X3Y46/C0;X3Y46/C0/W230;1;X5Y46/W230;X5Y46/W230/N131;1;X3Y46/W230;X3Y46/W230/W232;1;X3Y46/C1;X3Y46/C1/W230;1;X5Y47/E130;X5Y47/E130/Q2;1;X5Y47/E260;X5Y47/E260/E130;1;X6Y47/SEL6;X6Y47/SEL6/E261;1;X5Y46/D6;X5Y46/D6/N131;1;X5Y47/N130;X5Y47/N130/Q2;1;X5Y46/D7;X5Y46/D7/N131;1;X5Y47/Q2;;1;X5Y47/X01;X5Y47/X01/Q2;1;X5Y47/B2;X5Y47/B2/X01;1",
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21"
+          }
+        },
+        "counter_DFF_Q_14_D": {
+          "hide_name": 0,
+          "bits": [ 9551 ] ,
+          "attributes": {
+            "ROUTING": "X5Y47/F2;;1;X5Y47/XD2;X5Y47/XD2/F2;1"
+          }
+        },
+        "counter_DFF_Q_14_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9549 ] ,
+          "attributes": {
+            "ROUTING": "X5Y47/COUT2;;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "counter[26]": {
+          "hide_name": 0,
+          "bits": [ 9547 ] ,
+          "attributes": {
+            "ROUTING": "X5Y46/C6;X5Y46/C6/N111;1;X6Y47/D6;X6Y47/D6/N270;1;X5Y46/W250;X5Y46/W250/N111;1;X3Y46/X08;X3Y46/X08/W252;1;X3Y46/C6;X3Y46/C6/X08;1;X5Y47/W130;X5Y47/W130/Q3;1;X5Y47/E270;X5Y47/E270/W130;1;X6Y47/N270;X6Y47/N270/E271;1;X6Y47/D7;X6Y47/D7/N270;1;X5Y47/SN10;X5Y47/SN10/Q3;1;X5Y46/C7;X5Y46/C7/N111;1;X5Y47/Q3;;1;X5Y47/B3;X5Y47/B3/Q3;1",
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21"
+          }
+        },
+        "counter_DFF_Q_13_D": {
+          "hide_name": 0,
+          "bits": [ 9545 ] ,
+          "attributes": {
+            "ROUTING": "X5Y47/F3;;1;X5Y47/XD3;X5Y47/XD3/F3;1"
+          }
+        },
+        "counter_DFF_Q_13_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9543 ] ,
+          "attributes": {
+            "ROUTING": "X5Y47/COUT3;;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "counter[27]": {
+          "hide_name": 0,
+          "bits": [ 9541 ] ,
+          "attributes": {
+            "ROUTING": "X6Y47/C6;X6Y47/C6/N130;1;X5Y47/N240;X5Y47/N240/W101;1;X5Y47/B4;X5Y47/B4/N240;1;X6Y47/W100;X6Y47/W100/Q4;1;X5Y47/C6;X5Y47/C6/W101;1;X6Y47/Q4;;1;X6Y47/N130;X6Y47/N130/Q4;1;X6Y47/C7;X6Y47/C7/N130;1",
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21"
+          }
+        },
+        "counter_DFF_Q_12_D": {
+          "hide_name": 0,
+          "bits": [ 9539 ] ,
+          "attributes": {
+            "ROUTING": "X5Y47/F4;;1;X5Y47/E240;X5Y47/E240/F4;1;X6Y47/X07;X6Y47/X07/E241;1;X6Y47/D4;X6Y47/D4/X07;1"
           }
         },
         "$PACKER_GND": {
           "hide_name": 1,
-          "bits": [ 9666 ] ,
+          "bits": [ 9755 ] ,
           "attributes": {
             "ROUTING": " "
           }
         },
         "$PACKER_VCC": {
           "hide_name": 1,
-          "bits": [ 9665 ] ,
+          "bits": [ 9754 ] ,
           "attributes": {
-            "ROUTING": "X2Y43/C2;X2Y43/C2/S241;1;X2Y42/S240;X2Y42/S240/VCC;1;X2Y42/VCC;;1;X3Y43/C0;X3Y43/C0/X04;1;X3Y43/X04;X3Y43/X04/VCC;1;X3Y43/C4;X3Y43/C4/S201;1;X3Y42/S200;X3Y42/S200/VCC;1;X50Y27/C4;X50Y27/C4/W241;1;X51Y27/W240;X51Y27/W240/VCC;1;X51Y27/VCC;;1;X4Y43/C2;X4Y43/C2/S241;1;X4Y42/S240;X4Y42/S240/VCC;1;X4Y42/VCC;;1;X2Y43/C3;X2Y43/C3/S262;1;X2Y41/S260;X2Y41/S260/VCC;1;X2Y41/VCC;;1;X3Y43/C1;X3Y43/C1/S242;1;X3Y41/S240;X3Y41/S240/VCC;1;X3Y41/VCC;;1;X1Y43/C3;X1Y43/C3/E261;1;X0Y43/E260;X0Y43/E260/VCC;1;X0Y43/VCC;;1;X3Y43/C5;X3Y43/C5/N222;1;X3Y45/N220;X3Y45/N220/VCC;1;X3Y45/VCC;;1;X5Y43/C0;X5Y43/C0/S241;1;X5Y42/S240;X5Y42/S240/VCC;1;X5Y42/VCC;;1;X3Y43/C3;X3Y43/C3/N261;1;X3Y44/N260;X3Y44/N260/VCC;1;X3Y44/VCC;;1;X4Y43/C5;X4Y43/C5/S202;1;X4Y41/S200;X4Y41/S200/VCC;1;X4Y41/VCC;;1;X4Y43/C3;X4Y43/C3/N241;1;X4Y44/N240;X4Y44/N240/VCC;1;X4Y44/VCC;;1;X1Y43/C4;X1Y43/C4/N202;1;X1Y45/N200;X1Y45/N200/VCC;1;X1Y45/VCC;;1;X4Y43/C4;X4Y43/C4/W262;1;X6Y43/W260;X6Y43/W260/VCC;1;X6Y43/VCC;;1;X1Y43/C2;X1Y43/C2/N241;1;X1Y44/N240;X1Y44/N240/VCC;1;X1Y44/VCC;;1;X1Y43/C5;X1Y43/C5/S202;1;X1Y41/S200;X1Y41/S200/VCC;1;X1Y41/VCC;;1;X3Y43/C2;X3Y43/C2/S241;1;X3Y42/S240;X3Y42/S240/VCC;1;X3Y42/VCC;;1;X4Y43/C1;X4Y43/C1/W261;1;X5Y43/W260;X5Y43/W260/VCC;1;X5Y43/VCC;;1;X4Y43/C0;X4Y43/C0/X04;1;X4Y43/X04;X4Y43/X04/VCC;1;X4Y43/VCC;;1;X2Y43/C1;X2Y43/C1/W241;1;X3Y43/W240;X3Y43/W240/VCC;1;X3Y43/VCC;;1;X1Y43/C0;X1Y43/C0/S261;1;X1Y42/S260;X1Y42/S260/VCC;1;X1Y42/VCC;;1;X2Y43/C4;X2Y43/C4/N202;1;X2Y45/N200;X2Y45/N200/VCC;1;X2Y45/VCC;;1;X1Y43/C1;X1Y43/C1/X04;1;X1Y43/X04;X1Y43/X04/VCC;1;X1Y43/VCC;;1;X2Y43/C5;X2Y43/C5/N201;1;X2Y44/N200;X2Y44/N200/VCC;1;X2Y44/VCC;;1;X2Y43/C0;X2Y43/C0/X04;1;X2Y43/X04;X2Y43/X04/VCC;1;X2Y43/VCC;;1"
-          }
-        },
-        "counter_DFF_Q_10_D_ALU_SUM_COUT": {
-          "hide_name": 0,
-          "bits": [ 9512 ] ,
-          "attributes": {
-            "ROUTING": "X3Y43/COUT2;;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
-            "abc9_carry": "00000000000000000000000000000001"
+            "ROUTING": "X2Y47/C2;X2Y47/C2/N242;1;X2Y49/N240;X2Y49/N240/VCC;1;X2Y49/VCC;;1;X2Y47/C0;X2Y47/C0/S241;1;X2Y46/S240;X2Y46/S240/VCC;1;X2Y46/VCC;;1;X1Y47/C0;X1Y47/C0/N262;1;X1Y49/N260;X1Y49/N260/VCC;1;X1Y49/VCC;;1;X1Y47/C4;X1Y47/C4/X08;1;X1Y47/X08;X1Y47/X08/VCC;1;X1Y47/C1;X1Y47/C1/S241;1;X1Y46/S240;X1Y46/S240/VCC;1;X1Y46/VCC;;1;X4Y47/C0;X4Y47/C0/S241;1;X4Y46/S240;X4Y46/S240/VCC;1;X4Y46/VCC;;1;X3Y47/C1;X3Y47/C1/S261;1;X3Y46/S260;X3Y46/S260/VCC;1;X3Y47/C0;X3Y47/C0/X04;1;X3Y47/X04;X3Y47/X04/VCC;1;X1Y47/C2;X1Y47/C2/S262;1;X1Y45/S260;X1Y45/S260/VCC;1;X1Y45/VCC;;1;X5Y47/C4;X5Y47/C4/W241;1;X6Y47/W240;X6Y47/W240/VCC;1;X6Y47/VCC;;1;X4Y47/C4;X4Y47/C4/N202;1;X4Y49/N200;X4Y49/N200/VCC;1;X4Y49/VCC;;1;X2Y47/C3;X2Y47/C3/S262;1;X2Y45/S260;X2Y45/S260/VCC;1;X2Y45/VCC;;1;X1Y47/C5;X1Y47/C5/N221;1;X1Y48/N220;X1Y48/N220/VCC;1;X1Y48/VCC;;1;X50Y27/C4;X50Y27/C4/N221;1;X50Y28/N220;X50Y28/N220/VCC;1;X50Y28/VCC;;1;X2Y47/C5;X2Y47/C5/E262;1;X0Y47/E260;X0Y47/E260/VCC;1;X0Y47/VCC;;1;X5Y47/C1;X5Y47/C1/S241;1;X5Y46/S240;X5Y46/S240/VCC;1;X5Y46/VCC;;1;X5Y47/C5;X5Y47/C5/N201;1;X5Y48/N200;X5Y48/N200/VCC;1;X5Y48/VCC;;1;X2Y47/C4;X2Y47/C4/N201;1;X2Y48/N200;X2Y48/N200/VCC;1;X2Y48/VCC;;1;X4Y47/C1;X4Y47/C1/S262;1;X4Y45/S260;X4Y45/S260/VCC;1;X4Y45/VCC;;1;X3Y47/C4;X3Y47/C4/S222;1;X3Y45/S220;X3Y45/S220/VCC;1;X3Y45/VCC;;1;X4Y47/C2;X4Y47/C2/N261;1;X4Y48/N260;X4Y48/N260/VCC;1;X4Y48/VCC;;1;X3Y47/C3;X3Y47/C3/N261;1;X3Y48/N260;X3Y48/N260/VCC;1;X3Y48/VCC;;1;X3Y47/C5;X3Y47/C5/S221;1;X3Y46/S220;X3Y46/S220/VCC;1;X3Y46/VCC;;1;X5Y47/C0;X5Y47/C0/W262;1;X7Y47/W260;X7Y47/W260/VCC;1;X7Y47/VCC;;1;X5Y47/C2;X5Y47/C2/S242;1;X5Y45/S240;X5Y45/S240/VCC;1;X5Y45/VCC;;1;X3Y47/C2;X3Y47/C2/N242;1;X3Y49/N240;X3Y49/N240/VCC;1;X3Y49/VCC;;1;X4Y47/C5;X4Y47/C5/E241;1;X3Y47/E240;X3Y47/E240/VCC;1;X3Y47/VCC;;1;X1Y47/C3;X1Y47/C3/X04;1;X1Y47/X04;X1Y47/X04/VCC;1;X1Y47/VCC;;1;X2Y47/C1;X2Y47/C1/X04;1;X2Y47/X04;X2Y47/X04/VCC;1;X2Y47/VCC;;1;X5Y47/C3;X5Y47/C3/X04;1;X5Y47/X04;X5Y47/X04/VCC;1;X5Y47/VCC;;1;X4Y47/C3;X4Y47/C3/X04;1;X4Y47/X04;X4Y47/X04/VCC;1;X4Y47/VCC;;1"
           }
         },
         "counter_DFF_Q_11_D_ALU_SUM_COUT": {
           "hide_name": 0,
-          "bits": [ 9511 ] ,
+          "bits": [ 9535 ] ,
           "attributes": {
-            "ROUTING": "X3Y43/COUT1;;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.20-8.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "ROUTING": " ",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
             "abc9_carry": "00000000000000000000000000000001"
           }
         },
-        "counter[13]": {
+        "counter_DFF_Q_12_D_ALU_SUM_COUT": {
           "hide_name": 0,
-          "bits": [ 9509 ] ,
+          "bits": [ 9534 ] ,
           "attributes": {
-            "ROUTING": "X3Y44/Q4;;1;X3Y44/N130;X3Y44/N130/Q4;1;X3Y43/B2;X3Y43/B2/N131;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.16-5.23"
+            "ROUTING": "X5Y47/COUT4;;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:11.20-11.34|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/arith_map.v:57.7-63.5|/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_sim.v:1033.25-1033.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "counter[28]": {
+          "hide_name": 0,
+          "bits": [ 9532 ] ,
+          "attributes": {
+            "ROUTING": "X6Y47/X01;X6Y47/X01/Q2;1;X6Y47/C1;X6Y47/C1/X01;1;X6Y47/Q2;;1;X6Y47/EW10;X6Y47/EW10/Q2;1;X5Y47/B5;X5Y47/B5/W111;1",
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21"
+          }
+        },
+        "counter_DFF_Q_11_D": {
+          "hide_name": 0,
+          "bits": [ 9530 ] ,
+          "attributes": {
+            "ROUTING": "X5Y47/F5;;1;X5Y47/E100;X5Y47/E100/F5;1;X6Y47/D2;X6Y47/D2/E101;1"
+          }
+        },
+        "counter[0]": {
+          "hide_name": 0,
+          "bits": [ 9527 ] ,
+          "attributes": {
+            "ROUTING": "X1Y48/X01;X1Y48/X01/Q0;1;X1Y48/A0;X1Y48/A0/X01;1;X1Y48/Q0;;1;X1Y48/N130;X1Y48/N130/Q0;1;X1Y47/B1;X1Y47/B1/N131;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.16-8.23"
           }
         },
         "counter_DFF_Q_10_D": {
           "hide_name": 0,
-          "bits": [ 9508 ] ,
+          "bits": [ 9526 ] ,
           "attributes": {
-            "ROUTING": "X3Y43/F2;;1;X3Y43/SN10;X3Y43/SN10/F2;1;X3Y44/D4;X3Y44/D4/S111;1"
+            "ROUTING": "X1Y48/F0;;1;X1Y48/XD0;X1Y48/XD0/F0;1"
           }
         },
-        "counter[22]": {
+        "counter[8]": {
           "hide_name": 0,
-          "bits": [ 9506 ] ,
+          "bits": [ 9524 ] ,
           "attributes": {
-            "ROUTING": "X3Y43/S800;X3Y43/S800/W101;1;X3Y47/W230;X3Y47/W230/S804;1;X1Y47/S230;X1Y47/S230/W232;1;X1Y48/A7;X1Y48/A7/S231;1;X4Y43/Q5;;1;X4Y43/W100;X4Y43/W100/Q5;1;X4Y43/B5;X4Y43/B5/W100;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.16-5.23"
+            "ROUTING": "X2Y47/Q3;;1;X2Y47/B3;X2Y47/B3/Q3;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.16-8.23"
           }
         },
         "counter_DFF_Q_1_D": {
           "hide_name": 0,
-          "bits": [ 9505 ] ,
+          "bits": [ 9523 ] ,
           "attributes": {
-            "ROUTING": "X4Y43/F5;;1;X4Y43/XD5;X4Y43/XD5/F5;1"
+            "ROUTING": "X2Y47/F3;;1;X2Y47/XD3;X2Y47/XD3/F3;1"
           }
         },
-        "counter[23]": {
+        "counter[2]": {
           "hide_name": 0,
-          "bits": [ 9502 ] ,
+          "bits": [ 9520 ] ,
           "attributes": {
-            "ROUTING": "X5Y44/S800;X5Y44/S800/S101;1;X5Y48/W230;X5Y48/W230/S804;1;X3Y48/S230;X3Y48/S230/W232;1;X3Y49/A4;X3Y49/A4/S231;1;X5Y43/Q5;;1;X5Y43/S100;X5Y43/S100/Q5;1;X5Y43/B0;X5Y43/B0/S100;1",
-            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:5.16-5.23"
+            "ROUTING": "X1Y47/Q3;;1;X1Y47/B3;X1Y47/B3/Q3;1",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:8.16-8.23"
           }
         },
         "counter_DFF_Q_D": {
           "hide_name": 0,
-          "bits": [ 9501 ] ,
+          "bits": [ 9519 ] ,
           "attributes": {
-            "ROUTING": "X5Y43/F0;;1;X5Y43/D5;X5Y43/D5/F0;1"
+            "ROUTING": "X1Y47/F3;;1;X1Y47/XD3;X1Y47/XD3/F3;1"
           }
         },
         "clk_IBUF_I_O": {
           "hide_name": 0,
-          "bits": [ 9498 ] ,
+          "bits": [ 9517 ] ,
           "attributes": {
-            "ROUTING": "X0Y6/S830;X0Y6/S830/F6;5;X0Y14/S800;X0Y14/S800/S838;5;X0Y22/S810;X0Y22/S810/S808;5;X0Y30/N210;X0Y30/N210/S818;5;X0Y28/N240;X0Y28/N240/N212;5;X0Y27/CLK0;X0Y27/CLK0/N241;5;X0Y6/F6;;5;X3Y43/CLK1;X3Y43/CLK1/GB10;5;X3Y43/CLK2;X3Y43/CLK2/GB10;5;X4Y43/CLK0;X4Y43/CLK0/GB10;5;X4Y43/CLK1;X4Y43/CLK1/GB10;5;X4Y44/CLK0;X4Y44/CLK0/GB10;5;X2Y42/GB10;X2Y42/GBO0/GT00;5;X1Y42/CLK0;X1Y42/CLK0/GB10;5;X1Y43/CLK1;X1Y43/CLK1/GB10;5;X1Y43/CLK2;X1Y43/CLK2/GB10;5;X2Y43/CLK0;X2Y43/CLK0/GB10;5;X2Y43/CLK1;X2Y43/CLK1/GB10;5;X2Y43/CLK2;X2Y43/CLK2/GB10;5;X3Y43/CLK0;X3Y43/CLK0/GB10;5;X4Y44/GB10;X2Y44/GBO0/GT00;5;X3Y44/CLK2;X3Y44/CLK2/GB10;5;X2Y47/GT00;X2Y46/GT00/SPINE17;5;X2Y43/GBO0;X2Y43/GBO0/GT00;5;X4Y43/CLK2;X4Y43/CLK2/GB10;5;X26Y46/SPINE17;X27Y27/SPINE17/TLBDCLK2;5;X6Y32/GT00;X6Y46/GT00/SPINE17;5;X6Y43/GBO0;X6Y43/GBO0/GT00;5;X5Y43/CLK2;X5Y43/CLK2/GB10;5"
+            "ROUTING": "X0Y6/S830;X0Y6/S830/F6;5;X0Y14/S800;X0Y14/S800/S838;5;X0Y22/S810;X0Y22/S810/S808;5;X0Y30/N210;X0Y30/N210/S818;5;X0Y28/N240;X0Y28/N240/N212;5;X0Y27/CLK0;X0Y27/CLK0/N241;5;X0Y6/F6;;5;X2Y47/CLK2;X2Y47/CLK2/GB10;5;X1Y47/CLK2;X1Y47/CLK2/GB10;5;X2Y47/CLK0;X2Y47/CLK0/GB10;5;X3Y47/CLK0;X3Y47/CLK0/GB10;5;X3Y47/CLK1;X3Y47/CLK1/GB10;5;X3Y47/CLK2;X3Y47/CLK2/GB10;5;X3Y48/CLK0;X3Y48/CLK0/GB10;5;X4Y47/CLK0;X4Y47/CLK0/GB10;5;X2Y48/CLK1;X2Y48/CLK1/GB10;5;X4Y47/CLK1;X4Y47/CLK1/GB10;5;X4Y47/CLK2;X4Y47/CLK2/GB10;5;X1Y46/GB10;X2Y46/GBO0/GT00;5;X4Y46/CLK0;X4Y46/CLK0/GB10;5;X5Y46/CLK1;X5Y46/CLK1/GB10;5;X6Y46/GBO0;X6Y46/GBO0/GT00;5;X5Y46/CLK0;X5Y46/CLK0/GB10;5;X5Y47/CLK1;X5Y47/CLK1/GB10;5;X6Y47/CLK2;X6Y47/CLK2/GB10;5;X6Y32/GT00;X6Y46/GT00/SPINE17;5;X5Y47/GB10;X6Y47/GBO0/GT00;5;X6Y47/CLK1;X6Y47/CLK1/GB10;5;X4Y48/GB10;X2Y48/GBO0/GT00;5;X1Y48/CLK0;X1Y48/CLK0/GB10;5;X2Y47/CLK1;X2Y47/CLK1/GB10;5;X26Y46/SPINE17;X27Y27/SPINE17/TLBDCLK2;5;X2Y47/GT00;X2Y46/GT00/SPINE17;5;X0Y47/GB10;X2Y47/GBO0/GT00;5;X1Y47/CLK1;X1Y47/CLK1/GB10;5"
           }
         },
         "clk": {
           "hide_name": 0,
-          "bits": [ 9494 ] ,
+          "bits": [ 9496 ] ,
           "attributes": {
             "ROUTING": " ",
             "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:2.23-2.26"
+          }
+        },
+        "btn2_IBUF_I_O[0]": {
+          "hide_name": 0,
+          "bits": [ 9510 ] ,
+          "attributes": {
+            "SEG_WIRES_TO_ISOLATE": "X0Y36/LT00;X4Y36/LT00;",
+            "ROUTING": "X55Y29/F6;;5;X55Y37/E830;X55Y37/E830/S838;5;X48Y37/W800;X48Y37/W800/W838;5;X40Y37/W800;X40Y37/W800/W808;5;X32Y37/W800;X32Y37/W800/W808;5;X24Y37/W800;X24Y37/W800/W808;5;X16Y37/W800;X16Y37/W800/W808;5;X8Y37/S800;X8Y37/S800/W808;5;X8Y45/S810;X8Y45/S810/S808;5;X8Y53/W810;X8Y53/W810/S818;5;X4Y53/S210;X4Y53/S210/W814;5;X4Y54/A6;X4Y54/A6/S211;5;X55Y29/S830;X55Y29/S830/F6;5;X55Y37/W830;X55Y37/W830/S838;5;X47Y37/W800;X47Y37/W800/W838;5;X39Y37/W800;X39Y37/W800/W808;5;X31Y37/W800;X31Y37/W800/W808;5;X23Y37/W800;X23Y37/W800/W808;5;X15Y37/W800;X15Y37/W800/W808;5;X7Y37/W800;X7Y37/W800/W808;5;X0Y37/S800;X0Y37/S800/E808;5;X0Y45/S810;X0Y45/S810/S808;5;X0Y53/S210;X0Y53/S210/S818;5;X0Y54/A6;X0Y54/A6/S211;5;X3Y46/A1;X3Y46/A1/X02;5;X3Y46/X02;X3Y46/X02/W231;5;X3Y46/A0;X3Y46/A0/X02;5;X6Y47/A7;X6Y47/A7/X06;5;X6Y47/X06;X6Y47/X06/E231;5;X6Y47/A6;X6Y47/A6/X06;5;X5Y47/E230;X5Y47/E230/LB31;5;X6Y47/X02;X6Y47/X02/E231;5;X6Y47/A1;X6Y47/A1/X02;5;X2Y46/A1;X2Y46/A1/X02;5;X2Y46/X02;X2Y46/X02/E231;5;X2Y46/A0;X2Y46/A0/X02;5;X2Y46/A6;X2Y46/A6/X06;5;X4Y46/A3;X4Y46/A3/X02;5;X4Y46/A2;X4Y46/A2/X02;5;X0Y36/LT00;X0Y54/LT02/A6;5;X0Y46/LBO0;X0Y46/LBO0/LT01;5;X1Y46/E230;X1Y46/E230/LB31;5;X2Y46/X06;X2Y46/X06/E231;5;X2Y46/A5;X2Y46/A5/X06;5;X4Y46/A5;X4Y46/A5/X06;5;X4Y46/X06;X4Y46/X06/E231;5;X4Y46/A4;X4Y46/A4/X06;5;X3Y46/E230;X3Y46/E230/LB31;5;X4Y46/X02;X4Y46/X02/E231;5;X4Y46/A0;X4Y46/A0/X02;5;X5Y46/A7;X5Y46/A7/X06;5;X4Y46/E230;X4Y46/E230/LB31;5;X5Y46/X06;X5Y46/X06/E231;5;X5Y46/A6;X5Y46/A6/X06;5;X4Y47/LBO0;X4Y47/LBO0/LT01;5;X4Y47/E230;X4Y47/E230/LB31;5;X5Y47/X06;X5Y47/X06/E231;5;X5Y47/A6;X5Y47/A6/X06;5;X4Y36/LT00;X4Y54/LT02/A6;5;X4Y46/LBO0;X4Y46/LBO0/LT01;5;X4Y46/W230;X4Y46/W230/LB31;5;X3Y46/X06;X3Y46/X06/W231;5;X3Y46/A6;X3Y46/A6/X06;5",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn1": {
+          "hide_name": 0,
+          "bits": [ 9494 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:3.23-3.27"
+          }
+        },
+        "btn2_IBUF_I_O[1]": {
+          "hide_name": 0,
+          "bits": [ 9501 ] ,
+          "attributes": {
+            "SEG_WIRES_TO_ISOLATE": "X0Y36/LT10;X4Y36/LT10;",
+            "ROUTING": "X55Y29/Q6;;5;X55Y29/E830;X55Y29/E830/Q6;5;X48Y29/W800;X48Y29/W800/W838;5;X40Y29/W800;X40Y29/W800/W808;5;X32Y29/W800;X32Y29/W800/W808;5;X24Y29/W800;X24Y29/W800/W808;5;X16Y29/W810;X16Y29/W810/W808;5;X8Y29/S810;X8Y29/S810/W818;5;X8Y37/S820;X8Y37/S820/S818;5;X8Y45/W820;X8Y45/W820/S828;5;X4Y45/S820;X4Y45/S820/W824;5;X4Y53/S100;X4Y53/S100/S828;5;X4Y54/A7;X4Y54/A7/S101;5;X55Y29/W830;X55Y29/W830/Q6;5;X47Y29/W800;X47Y29/W800/W838;5;X39Y29/W800;X39Y29/W800/W808;5;X31Y29/W800;X31Y29/W800/W808;5;X23Y29/W800;X23Y29/W800/W808;5;X15Y29/W800;X15Y29/W800/W808;5;X7Y29/W800;X7Y29/W800/W808;5;X0Y29/S800;X0Y29/S800/E808;5;X0Y37/S810;X0Y37/S810/S808;5;X0Y45/S820;X0Y45/S820/S818;5;X0Y53/S100;X0Y53/S100/S828;5;X0Y54/A7;X0Y54/A7/S101;5;X3Y46/B1;X3Y46/B1/X04;5;X3Y46/X04;X3Y46/X04/LB71;5;X3Y46/B0;X3Y46/B0/X04;5;X6Y47/B7;X6Y47/B7/X05;5;X6Y47/X05;X6Y47/X05/LB71;5;X6Y47/B6;X6Y47/B6/X05;5;X6Y47/X04;X6Y47/X04/LB71;5;X6Y47/B1;X6Y47/B1/X04;5;X2Y46/B1;X2Y46/B1/X04;5;X2Y46/X04;X2Y46/X04/LB71;5;X2Y46/B0;X2Y46/B0/X04;5;X2Y46/X05;X2Y46/X05/LB71;5;X2Y46/B6;X2Y46/B6/X05;5;X4Y46/B3;X4Y46/B3/X01;5;X4Y46/B2;X4Y46/B2/X01;5;X0Y36/LT10;X0Y54/LT13/A7;5;X0Y46/LBO1;X0Y46/LBO1/LT04;5;X2Y46/X01;X2Y46/X01/LB71;5;X2Y46/B5;X2Y46/B5/X01;5;X4Y46/B5;X4Y46/B5/X01;5;X4Y46/X01;X4Y46/X01/LB71;5;X4Y46/B4;X4Y46/B4/X01;5;X4Y46/X04;X4Y46/X04/LB71;5;X4Y46/B0;X4Y46/B0/X04;5;X5Y46/B7;X5Y46/B7/X05;5;X5Y46/X05;X5Y46/X05/LB71;5;X5Y46/B6;X5Y46/B6/X05;5;X4Y47/LBO1;X4Y47/LBO1/LT04;5;X5Y47/X05;X5Y47/X05/LB71;5;X5Y47/B6;X5Y47/B6/X05;5;X4Y36/LT10;X4Y54/LT13/A7;5;X4Y46/LBO1;X4Y46/LBO1/LT04;5;X3Y46/X05;X3Y46/X05/LB71;5;X3Y46/B6;X3Y46/B6/X05;5",
+            "src": "/home/white/.oss-cad-suite/lib/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn2": {
+          "hide_name": 0,
+          "bits": [ 9495 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "/home/white/Documents/GitHub/Private/FPGA-Projects/FPGA-BlinkTest/top.v:4.23-4.27"
           }
         }
       }

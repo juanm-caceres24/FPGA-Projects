@@ -1,6 +1,15 @@
+// Reloj (27 MHz)
 IO_LOC "clk" 4;
 IO_PORT "clk" PULL_MODE=NONE DRIVE=OFF;
 
+// Botones (S1 y S2)
+IO_LOC "btn1" 88;
+IO_PORT "btn1" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC "btn2" 87;
+IO_PORT "btn2" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+// 6 LEDs integrados
 IO_LOC "leds[0]" 15;
 IO_PORT "leds[0]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
 IO_LOC "leds[1]" 16;
