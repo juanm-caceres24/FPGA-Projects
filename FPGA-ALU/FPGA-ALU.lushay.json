@@ -1,0 +1,5 @@
+{
+  "name": "FPGA-ALU",
+  "board": "tangnano20k",
+  "includedFiles": "all"
+}
