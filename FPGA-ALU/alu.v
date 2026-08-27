@@ -1,5 +1,5 @@
 module alu #(
-    parameter DATA_WIDTH = 32
+    parameter DATA_WIDTH = 8
 )(
     input  wire [DATA_WIDTH-1:0] a,
     input  wire [DATA_WIDTH-1:0] b,

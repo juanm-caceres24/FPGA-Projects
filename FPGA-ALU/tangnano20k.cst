@@ -1,42 +1,85 @@
-IO_LOC "sw_a[0]" 73;
-IO_PORT "sw_a[0]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
-IO_LOC "sw_a[1]" 74;
-IO_PORT "sw_a[1]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
-IO_LOC "sw_a[2]" 75;
-IO_PORT "sw_a[2]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
-IO_LOC "sw_a[3]" 85;
-IO_PORT "sw_a[3]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+// ==========================================================
+// STANDARD PROTOBOARD CONFIGURATION - TANG NANO 20K
+// ==========================================================
 
-IO_LOC "sw_b[0]" 77;
-IO_PORT "sw_b[0]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
-IO_LOC "sw_b[1]" 76;
-IO_PORT "sw_b[1]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
-IO_LOC "sw_b[2]" 49;
-IO_PORT "sw_b[2]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
-IO_LOC "sw_b[3]" 86;
-IO_PORT "sw_b[3]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+// Clock (27 MHz)
+IO_LOC "clk" 4;
+IO_PORT "clk" PULL_MODE=NONE DRIVE=OFF;
 
-IO_LOC "sw_op[0]" 25;
-IO_PORT "sw_op[0]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
-IO_LOC "sw_op[1]" 26;
-IO_PORT "sw_op[1]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
-IO_LOC "sw_op[2]" 29;
-IO_PORT "sw_op[2]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
-IO_LOC "sw_op[3]" 30;
-IO_PORT "sw_op[3]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
-IO_LOC "sw_op[4]" 31;
-IO_PORT "sw_op[4]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
-IO_LOC "sw_op[5]" 52;
-IO_PORT "sw_op[5]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+// ----------------------------------------------------------
+// Output: LEDs of state (Active in HIGH)
+// ----------------------------------------------------------
+IO_LOC "led_carry" 31;
+IO_PORT "led_carry" IO_TYPE=LVCMOS33 DRIVE=8;
 
-IO_LOC "led_res[0]" 53;
-IO_PORT "led_res[0]" IO_TYPE=LVCMOS33 DRIVE=8;
-IO_LOC "led_res[1]" 71;
-IO_PORT "led_res[1]" IO_TYPE=LVCMOS33 DRIVE=8;
-IO_LOC "led_res[2]" 72;
-IO_PORT "led_res[2]" IO_TYPE=LVCMOS33 DRIVE=8;
-IO_LOC "led_res[3]" 54;
+IO_LOC "led_zero" 30;
+IO_PORT "led_zero" IO_TYPE=LVCMOS33 DRIVE=8;
+
+// ----------------------------------------------------------
+// Output: 8 LEDs of Results (MSB -> LSB, Active in HIGH)
+// ----------------------------------------------------------
+IO_LOC "led_res[7]" 29;
+IO_PORT "led_res[7]" IO_TYPE=LVCMOS33 DRIVE=8;
+
+IO_LOC "led_res[6]" 26;
+IO_PORT "led_res[6]" IO_TYPE=LVCMOS33 DRIVE=8;
+
+IO_LOC "led_res[5]" 25;
+IO_PORT "led_res[5]" IO_TYPE=LVCMOS33 DRIVE=8;
+
+IO_LOC "led_res[4]" 28;
+IO_PORT "led_res[4]" IO_TYPE=LVCMOS33 DRIVE=8;
+
+IO_LOC "led_res[3]" 27;
 IO_PORT "led_res[3]" IO_TYPE=LVCMOS33 DRIVE=8;
 
-IO_LOC "led_zero" 55;
-IO_PORT "led_zero" IO_TYPE=LVCMOS33 DRIVE=8;
+IO_LOC "led_res[2]" 77;
+IO_PORT "led_res[2]" IO_TYPE=LVCMOS33 DRIVE=8;
+
+IO_LOC "led_res[1]" 74;
+IO_PORT "led_res[1]" IO_TYPE=LVCMOS33 DRIVE=8;
+
+IO_LOC "led_res[0]" 73;
+IO_PORT "led_res[0]" IO_TYPE=LVCMOS33 DRIVE=8;
+
+// ----------------------------------------------------------
+// Inputs: 8 Switches to GND (internal PULL_UP: 0 = ON, 1 = OFF)
+// ----------------------------------------------------------
+IO_LOC "sw_data[7]" 72;
+IO_PORT "sw_data[7]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC "sw_data[6]" 86;
+IO_PORT "sw_data[6]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC "sw_data[5]" 49;
+IO_PORT "sw_data[5]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC "sw_data[4]" 55;
+IO_PORT "sw_data[4]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC "sw_data[3]" 48;
+IO_PORT "sw_data[3]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC "sw_data[2]" 51;
+IO_PORT "sw_data[2]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC "sw_data[1]" 54;
+IO_PORT "sw_data[1]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC "sw_data[0]" 56;
+IO_PORT "sw_data[0]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+// ----------------------------------------------------------
+// Inputs: 4 Buttons to GND (internal PULL_UP: 0 = pressed)
+// ----------------------------------------------------------
+IO_LOC "btn[0]" 41;
+IO_PORT "btn[0]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC "btn[1]" 42;
+IO_PORT "btn[1]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC "btn[2]" 80;
+IO_PORT "btn[2]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC "btn[3]" 76;
+IO_PORT "btn[3]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
