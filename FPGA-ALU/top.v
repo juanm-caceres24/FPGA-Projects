@@ -3,14 +3,13 @@ module top #(
     parameter OP_WIDTH   = 6
 )(
     input  wire                  clk,
-    input  wire [DATA_WIDTH-1:0] sw_data,
+    input  wire [DATA_WIDTH-1:0] sw,
     input  wire [3:0]            btn,
-    output wire [DATA_WIDTH-1:0] led_res,
-    output wire                  led_carry,
-    output wire                  led_zero
+    output wire [DATA_WIDTH-1:0] led,
+    output wire [1:0]            led_aux
 );
 
-    wire [DATA_WIDTH-1:0] sw_active_high = ~sw_data;
+    wire [DATA_WIDTH-1:0] sw_active_high = ~sw;
 
     reg [DATA_WIDTH-1:0] reg_a  = {DATA_WIDTH{1'b0}};
     reg [DATA_WIDTH-1:0] reg_b  = {DATA_WIDTH{1'b0}};
@@ -41,8 +40,7 @@ module top #(
         .zero(alu_zero)
     );
 
-    assign led_res   = alu_result;
-    assign led_zero  = alu_zero;
-    assign led_carry = 1'b0;
+    assign led     = alu_result;
+    assign led_aux = {alu_zero, 1'b0};
 
 endmodule
