@@ -17,6 +17,8 @@ module alu #(
     localparam OP_SRL = 6'b000010;
     localparam OP_SRA = 6'b000011;
 
+    localparam SHIFT_WIDTH = (DATA_WIDTH <= 2) ? 1 : $clog2(DATA_WIDTH);
+
     always @(*) begin
         case (alu_op)
             OP_ADD:  result = a + b;
@@ -25,8 +27,8 @@ module alu #(
             OP_OR:   result = a | b;
             OP_XOR:  result = a ^ b;
             OP_NOR:  result = ~(a | b);
-            OP_SRL:  result = a >> b[4:0];
-            OP_SRA:  result = $signed(a) >>> b[4:0];
+            OP_SRL:  result = a >> b[SHIFT_WIDTH-1:0];
+            OP_SRA:  result = $signed(a) >>> b[SHIFT_WIDTH-1:0];
             default: result = {DATA_WIDTH{1'b0}};
         endcase
     end
