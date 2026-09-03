@@ -5,7 +5,9 @@ module alu #(
     input  wire [DATA_WIDTH-1:0] b,
     input  wire [5:0]            alu_op,
     output reg  [DATA_WIDTH-1:0] result,
-    output wire                  zero
+    output wire                  zero,
+    output reg                   carry,
+    output reg                   overflow
 );
 
     localparam OP_ADD = 6'b100000;
@@ -19,18 +21,35 @@ module alu #(
 
     localparam SHIFT_WIDTH = (DATA_WIDTH <= 2) ? 1 : $clog2(DATA_WIDTH);
 
+    reg [DATA_WIDTH:0] ext_result;
+
     always @(*) begin
+        ext_result = {(DATA_WIDTH+1){1'b0}};
+        overflow   = 1'b0;
+
         case (alu_op)
-            OP_ADD:  result = a + b;
-            OP_SUB:  result = a - b;
-            OP_AND:  result = a & b;
-            OP_OR:   result = a | b;
-            OP_XOR:  result = a ^ b;
-            OP_NOR:  result = ~(a | b);
-            OP_SRL:  result = a >> b[SHIFT_WIDTH-1:0];
-            OP_SRA:  result = $signed(a) >>> b[SHIFT_WIDTH-1:0];
-            default: result = {DATA_WIDTH{1'b0}};
+            OP_ADD: begin
+                ext_result = a + b;
+                overflow = (a[DATA_WIDTH-1] == b[DATA_WIDTH-1]) && (ext_result[DATA_WIDTH-1] != a[DATA_WIDTH-1]);
+            end
+            
+            OP_SUB: begin
+                ext_result = a - b;
+                overflow = (a[DATA_WIDTH-1] != b[DATA_WIDTH-1]) && (ext_result[DATA_WIDTH-1] != a[DATA_WIDTH-1]);
+            end
+            
+            OP_AND:  ext_result = {1'b0, a & b};
+            OP_OR:   ext_result = {1'b0, a | b};
+            OP_XOR:  ext_result = {1'b0, a ^ b};
+            OP_NOR:  ext_result = {1'b0, ~(a | b)};
+            OP_SRL:  ext_result = {1'b0, a >> b[SHIFT_WIDTH-1:0]};
+            OP_SRA:  ext_result = {1'b0, $signed(a) >>> b[SHIFT_WIDTH-1:0]};
+            
+            default: ext_result = {(DATA_WIDTH+1){1'b0}};
         endcase
+
+        result = ext_result[DATA_WIDTH-1:0];
+        carry  = ext_result[DATA_WIDTH];
     end
 
     assign zero = (result == {DATA_WIDTH{1'b0}}) ? 1'b1 : 1'b0;

@@ -10,32 +10,38 @@ IO_PORT "clk" PULL_MODE=NONE DRIVE=OFF;
 // Output: 2 Auxiliary LEDs (Active in HIGH)
 // ----------------------------------------------------------
 
-IO_LOC "led_aux[1]" 31;
+IO_LOC "led_aux[3]" 31;
+IO_PORT "led_aux[3]" IO_TYPE=LVCMOS33 DRIVE=8;
+
+IO_LOC "led_aux[2]" 30;
+IO_PORT "led_aux[2]" IO_TYPE=LVCMOS33 DRIVE=8;
+
+IO_LOC "led_aux[1]" 29;
 IO_PORT "led_aux[1]" IO_TYPE=LVCMOS33 DRIVE=8;
 
-IO_LOC "led_aux[0]" 30;
+IO_LOC "led_aux[0]" 26;
 IO_PORT "led_aux[0]" IO_TYPE=LVCMOS33 DRIVE=8;
 
 // ----------------------------------------------------------
 // Output: 8 Main LEDs (MSB -> LSB, Active in HIGH)
 // ----------------------------------------------------------
 
-IO_LOC "led[7]" 29;
+IO_LOC "led[7]" 25;
 IO_PORT "led[7]" IO_TYPE=LVCMOS33 DRIVE=8;
 
-IO_LOC "led[6]" 26;
+IO_LOC "led[6]" 28;
 IO_PORT "led[6]" IO_TYPE=LVCMOS33 DRIVE=8;
 
-IO_LOC "led[5]" 25;
+IO_LOC "led[5]" 27;
 IO_PORT "led[5]" IO_TYPE=LVCMOS33 DRIVE=8;
 
-IO_LOC "led[4]" 28;
+IO_LOC "led[4]" 77;
 IO_PORT "led[4]" IO_TYPE=LVCMOS33 DRIVE=8;
 
-IO_LOC "led[3]" 27;
+IO_LOC "led[3]" 85;
 IO_PORT "led[3]" IO_TYPE=LVCMOS33 DRIVE=8;
 
-IO_LOC "led[2]" 77;
+IO_LOC "led[2]" 75;
 IO_PORT "led[2]" IO_TYPE=LVCMOS33 DRIVE=8;
 
 IO_LOC "led[1]" 74;
