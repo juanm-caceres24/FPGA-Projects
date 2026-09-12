@@ -16,10 +16,10 @@ module top #(
     // INPUT SIGNALS (ACTIVE LOW)
     wire [DATA_WIDTH-1:0] sw_active_high = ~sw;
     
-    wire rst   = ~btn[3]; // we will also use btn[3] to trigger TX
-    wire en_a  = ~btn[0]; // enable for Register A from physical button
-    wire en_b  = ~btn[1]; // enable for Register B
-    wire en_op = ~btn[2]; // enable for Register OP
+    wire rst   = ~btn[3]; // button 4: clear registers and reset FSM
+    wire en_a  = ~btn[0]; // button 1: load switches to register A
+    wire en_b  = ~btn[1]; // button 2: load switches to register B
+    wire en_op = ~btn[2]; // button 3: load switches to register OP
 
     // INTERNAL WIRES
     wire [DATA_WIDTH-1:0] val_a;
@@ -35,73 +35,78 @@ module top #(
     wire [7:0] uart_r_data;
     wire       uart_rx_empty;
     wire       uart_tx_full;
-    wire       uart_rd_trigger;
-    
-    // edge detection for physical button to send UART data
-    reg rst_prev;
-    always @(posedge clk) rst_prev <= rst;
-    wire tx_start_pulse = rst & ~rst_prev; // Pulse only on button press
+    wire       fsm_en_a;
+    wire       fsm_en_b;
+    wire       fsm_en_op;
+    wire       fsm_tx_start;
 
-    // UART top module instantiation
+    // UART read trigger: active when FSM commands it or when manual buttons are pressed
+    wire uart_rd_trigger = fsm_en_a | fsm_en_b | fsm_en_op;
+
+    // MULTIPLEXERS (data & enable routing)
+    // data routing: manual (switches) vs automatic (UART)
+    wire [DATA_WIDTH-1:0] reg_a_in  = en_a  ? sw_active_high : uart_r_data;
+    wire [DATA_WIDTH-1:0] reg_b_in  = en_b  ? sw_active_high : uart_r_data;
+    wire [OP_WIDTH-1:0]   reg_op_in = en_op ? sw_active_high[OP_WIDTH-1:0] : uart_r_data[OP_WIDTH-1:0];
+
+    // enable routing: save if manual button pressed OR if FSM commands it
+    wire reg_a_en  = en_a  | fsm_en_a;
+    wire reg_b_en  = en_b  | fsm_en_b;
+    wire reg_op_en = en_op | fsm_en_op;
+
+    // MODULE INSTANTIATIONS
+    // state machine for the control unit (FSM)
+    uart_fsm control_unit (
+        .clk(clk),
+        .rst(rst),
+        .rx_empty(uart_rx_empty),
+        .tx_full(uart_tx_full),
+        .en_a(fsm_en_a),
+        .en_b(fsm_en_b),
+        .en_op(fsm_en_op),
+        .tx_start(fsm_tx_start)
+    );
+
     uart_top uart_inst (
         .clk(clk),
-        .reset(1'b0), // avoid resetting UART to keep lines stable
+        .reset(1'b0),
         .rx(uart_rx),
         .tx(uart_tx),
         .rd_uart(uart_rd_trigger),
-        .wr_uart(tx_start_pulse),
+        .wr_uart(fsm_tx_start),
         .w_data(alu_result),
         .r_data(uart_r_data),
         .rx_empty(uart_rx_empty),
         .tx_full(uart_tx_full)
     );
 
-    // if UART receives data, trigger a read automatically
-    assign uart_rd_trigger = ~uart_rx_empty;
-
-    // multiplexer for register A: loads from UART if data arrived, else from switches
-    wire [DATA_WIDTH-1:0] reg_a_input = uart_rd_trigger ? uart_r_data : sw_active_high;
-    wire                  reg_a_en    = uart_rd_trigger | en_a;
-
-    // MODULE INSTANTIATIONS
-    
-    // register A (accepts both switch data and UART data)
-    register #(
-        .WIDTH(DATA_WIDTH)
-    ) reg_a_inst (
+    // datapath: registers
+    register #(.WIDTH(DATA_WIDTH)) reg_a_inst (
         .clk(clk),
-        .rst(1'b0), // disabled physical reset to preserve data
+        .rst(rst),
         .en(reg_a_en),
-        .d(reg_a_input),
+        .d(reg_a_in),
         .q(val_a)
     );
 
-    // register B
-    register #(
-        .WIDTH(DATA_WIDTH)
-    ) reg_b_inst (
+    register #(.WIDTH(DATA_WIDTH)) reg_b_inst (
         .clk(clk),
-        .rst(1'b0),
-        .en(en_b),
-        .d(sw_active_high),
+        .rst(rst),
+        .en(reg_b_en),
+        .d(reg_b_in),
         .q(val_b)
     );
 
-    // register OP
-    register #(
-        .WIDTH(OP_WIDTH)
-    ) reg_op_inst (
+    register #(.WIDTH(OP_WIDTH)) reg_op_inst (
         .clk(clk),
-        .rst(1'b0),
-        .en(en_op),
-        .d(sw_active_high[OP_WIDTH-1:0]),
+        .rst(rst),
+        .en(reg_op_en),
+        .d(reg_op_in),
         .q(val_op)
     );
 
-    // ALU
-    alu #(
-        .DATA_WIDTH(DATA_WIDTH)
-    ) alu_inst (
+    // datapath: ALU
+    alu #(.DATA_WIDTH(DATA_WIDTH)) alu_inst (
         .a(val_a),
         .b(val_b),
         .alu_op(val_op),
@@ -111,10 +116,8 @@ module top #(
         .overflow(alu_overflow)
     );
 
-    // OUTPUT SIGNALS
+    // PHYSICAL OUTPUTS
     assign led = alu_result;
-    
-    // added tx_full to the unused LED to monitor transmission status
     assign led_aux = {uart_tx_full, alu_overflow, alu_zero, alu_carry};
 
 endmodule
