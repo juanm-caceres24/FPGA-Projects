@@ -17,11 +17,16 @@ module uart_tx #(
         DATA  = 2'b10,
         STOP  = 2'b11;
 
-    reg [1:0] state_reg, state_next;
-    reg [3:0] s_reg, s_next;
-    reg [2:0] n_reg, n_next;
-    reg [7:0] b_reg, b_next;
-    reg       tx_reg, tx_next;
+    reg [1:0] state_reg;
+    reg [1:0] state_next;
+    reg [3:0] s_reg;
+    reg [3:0] s_next;
+    reg [2:0] n_reg;
+    reg [2:0] n_next;
+    reg [7:0] b_reg;
+    reg [7:0] b_next;
+    reg       tx_reg;
+    reg       tx_next;
 
     always @(posedge clk) begin
         if (reset) begin

@@ -18,7 +18,8 @@ module uart_fsm (
         S_WAIT_OP  = 3'd5,
         S_SEND_TX  = 3'd6;
 
-    reg [2:0] state_reg = S_LOAD_A, state_next;
+    reg [2:0] state_reg = S_LOAD_A;
+    reg [2:0] state_next;
 
     // state register update
     always @(posedge clk) begin
@@ -43,7 +44,7 @@ module uart_fsm (
                     state_next = S_WAIT_A;
                 end
             end
-            S_WAIT_A: begin // Espera a que la UART vacíe el búfer antes de seguir
+            S_WAIT_A: begin // wait for RX FIFO to be empty before loading B
                 if (rx_empty) state_next = S_LOAD_B;
             end
             
