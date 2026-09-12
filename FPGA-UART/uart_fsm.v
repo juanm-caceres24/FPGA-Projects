@@ -3,9 +3,9 @@ module uart_fsm (
     input  wire rst,
     input  wire rx_empty, // high when RX FIFO is empty
     input  wire tx_full,  // high when transmitter is busy
-    output reg  en_a,     // command to enable Register A
-    output reg  en_b,     // command to enable Register B
-    output reg  en_op,    // command to enable Register OP
+    output reg  en_a,     // command to enable register A
+    output reg  en_b,     // command to enable register B
+    output reg  en_op,    // command to enable register OP
     output reg  tx_start  // command to trigger UART TX
 );
 
