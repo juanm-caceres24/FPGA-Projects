@@ -17,15 +17,15 @@ module uart_tx #(
         DATA  = 2'b10,
         STOP  = 2'b11;
 
-    reg [1:0] state_reg;
+    reg [1:0] state_reg  = IDLE;
     reg [1:0] state_next;
-    reg [3:0] s_reg;
+    reg [3:0] s_reg      = 0;    // sampling counter
     reg [3:0] s_next;
-    reg [2:0] n_reg;
+    reg [2:0] n_reg      = 0;    // bit counter
     reg [2:0] n_next;
-    reg [7:0] b_reg;
+    reg [7:0] b_reg      = 0;    // data register
     reg [7:0] b_next;
-    reg       tx_reg;
+    reg       tx_reg     = 1'b1; // transmit line
     reg       tx_next;
 
     always @(posedge clk) begin
