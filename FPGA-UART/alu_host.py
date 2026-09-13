@@ -71,8 +71,13 @@ class ALUApp:
 
         # opcode mapping
         self.opcodes = {
-            "ADD": 32, "SUB": 34, "AND": 36, "OR":  37,
-            "XOR": 38, "SRL": 2,  "SRA": 3
+            "ADD": 32,
+            "SUB": 34,
+            "AND": 36,
+            "OR":  37,
+            "XOR": 38,
+            "SRL": 2,
+            "SRA": 3
         }
 
         # initialize backend
