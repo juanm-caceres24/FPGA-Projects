@@ -25,7 +25,7 @@ module uart_rx #(
     reg [7:0] b_reg;
     reg [7:0] b_next; // shift register
 
-    // State and data registers
+    // state and data registers
     always @(posedge clk) begin
         if (reset) begin
             state_reg <= IDLE;
