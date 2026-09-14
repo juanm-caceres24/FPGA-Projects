@@ -22,12 +22,19 @@ module uart_fsm (
         S_TX_W1     = 4'd6,
         S_TX_W2     = 4'd7;
 
-    reg [3:0] state_reg      = S_IDLE;
+    reg [3:0] state_reg;
     reg [3:0] state_next;
-    reg [7:0] cmd_reg        = 8'd0;   // stores the target register (0, 1, or 2)
+    reg [7:0] cmd_reg;       // stores the target register (0, 1, or 2)
     reg [7:0] cmd_next;
-    reg [2:0] tx_count       = 3'd0;   // counts from 0 to 4 for the 5 TX frames
+    reg [2:0] tx_count;      // counts from 0 to 4 for the 5 TX frames
     reg [2:0] tx_count_next;
+
+    // initial values for registers
+    initial begin
+        state_reg = S_IDLE;
+        cmd_reg   = 8'd0;
+        tx_count  = 3'd0;
+    end
 
     // state register update
     always @(posedge clk) begin

@@ -16,14 +16,22 @@ module uart_rx #(
         DATA  = 2'b10,
         STOP  = 2'b11;
 
-    reg [1:0] state_reg  = IDLE;
+    reg [1:0] state_reg;
     reg [1:0] state_next;
-    reg [3:0] s_reg      = 0; // sampling counter
+    reg [3:0] s_reg;
     reg [3:0] s_next;
-    reg [2:0] n_reg      = 0; // bit counter
+    reg [2:0] n_reg;
     reg [2:0] n_next; 
-    reg [7:0] b_reg      = 0; // data register
+    reg [7:0] b_reg;
     reg [7:0] b_next; 
+
+    // initial values for registers
+    initial begin
+        state_reg = IDLE;
+        s_reg     = 0;
+        n_reg     = 0;
+        b_reg     = 0;
+    end
 
     // state and data registers
     always @(posedge clk) begin
@@ -69,10 +77,11 @@ module uart_rx #(
                     if (s_reg == 15) begin
                         s_next = 0;
                         b_next = {rx, b_reg[7:1]};
-                        if (n_reg == (DBIT - 1))
+                        if (n_reg == (DBIT - 1)) begin
                             state_next = STOP;
-                        else
+                        end else begin
                             n_next = n_reg + 1;
+                        end
                     end else begin
                         s_next = s_reg + 1;
                     end
